@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE GREAT MACHINE — Industry 1.0 to 5.0</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label" id="progressLabel">ERA 00 — LOADING</div>
+  </div>
+
+  <!-- ERA NAVIGATOR -->
+  <nav class="era-nav" id="erNav">
+    <div class="era-nav-title">NAVIGATE</div>
+    <a href="#era1" class="era-nav-item" data-era="1">
+      <span class="era-nav-num">01</span>
+      <span class="era-nav-name">STEAM & COAL</span>
+    </a>
+    <a href="#era2" class="era-nav-item" data-era="2">
+      <span class="era-nav-num">02</span>
+      <span class="era-nav-name">ELECTRICITY</span>
+    </a>
+    <a href="#era3" class="era-nav-item" data-era="3">
+      <span class="era-nav-num">03</span>
+      <span class="era-nav-name">COMPUTERS</span>
+    </a>
+    <a href="#era4" class="era-nav-item" data-era="4">
+      <span class="era-nav-num">04</span>
+      <span class="era-nav-name">THE NET</span>
+    </a>
+    <a href="#era5" class="era-nav-item" data-era="5">
+      <span class="era-nav-num">05</span>
+      <span class="era-nav-name">HUMAN ERA</span>
+    </a>
+    <div class="era-nav-counter" id="eraCounter">UNCOVERED: <strong>0 / 5</strong></div>
+  </nav>
+
+  <!-- ========= HERO / OPENER ========= -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-kicker">
+        <span class="kicker-stamp">CLASSIFIED ARCHIVE</span>
+        <span class="kicker-dash">—</span>
+        <span class="kicker-sub" id="heroLoader">LOADING ERA 01 OF 05<span class="cursor">_</span></span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line" id="tl1">THE</span>
+        <span class="title-line" id="tl2">GREAT</span>
+        <span class="title-line accent-stamp" id="tl3">MACHINE</span>
+      </h1>
+      <div class="hero-sub-row">
+        <div class="hero-dateline">
+          <span class="dm-mono">1760 — PRESENT</span>
+        </div>
+        <p class="hero-deck">
+          Two hundred and sixty years. Five revolutions. One unbroken story of what happens when humans decide the world isn't moving fast enough — and build something to change that.
+        </p>
+      </div>
+      <div class="hero-meta-row">
+        <div class="hero-stat-box">
+          <span class="stat-num">260</span>
+          <span class="stat-label">YEARS OF PROGRESS</span>
+        </div>
+        <div class="hero-stat-box">
+          <span class="stat-num">5</span>
+          <span class="stat-label">INDUSTRIAL ERAS</span>
+        </div>
+        <div class="hero-stat-box">
+          <span class="stat-num">22</span>
+          <span class="stat-label">SOURCES DECODED</span>
+        </div>
+      </div>
+      <div class="scroll-cta">
+        <span class="dm-mono">SCROLL TO BEGIN</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+    <div class="hero-vol-tag">VOL. I — THE INDUSTRIAL CHRONICLES</div>
+  </section>
+
+  <!-- ========= ERA 1.0 ========= -->
+  <section class="era-section" id="era1" data-era="1">
+    <div class="era-print-header">
+      <div class="era-stamp reveal-stamp">ERA 01</div>
+      <div class="era-year-band">
+        <span class="dm-mono">1760 — 1840</span>
+      </div>
+      <div class="era-unlock-badge" id="unlock1">✦ UNLOCKED</div>
+    </div>
+
+    <div class="era-columns col-3">
+
+      <div class="col-main">
+        <h2 class="era-headline print-reveal">
+          STEAM,<br>COAL &<br>THE FACTORY<br>THAT ATE<br>THE WORLD
+        </h2>
+        <div class="col-rule"></div>
+        <p class="era-body print-reveal">
+          Before 1760, if you wanted a shirt, someone made it by hand. If you wanted iron, a blacksmith beat it out of ore, one piece at a time. The world moved at the speed of muscle and wind — and that was simply how things were.
+        </p>
+        <p class="era-body print-reveal">
+          Then James Watt refined the steam engine in 1769. It sounds like a minor technical upgrade. It was not. It was the moment humanity stopped being limited by the energy of living bodies and started harnessing something vastly, terrifyingly more powerful.
+        </p>
+        <p class="era-body print-reveal">
+          Steam engines ran at just 20–25% efficiency — wasting three-quarters of every unit of coal burned. And yet, they were still faster, stronger, and more tireless than any human or horse alive. The factory didn't just change how things were made. It changed where people lived, how families worked, and what a human life was worth in the market.
+        </p>
+      </div>
+
+      <div class="col-side">
+        <div class="classified-box print-reveal">
+          <div class="classified-label">CLASSIFIED DETAIL</div>
+          <p>Steam engines of the 1760s ran at only <strong>20–25% efficiency</strong> — yet they still outworked every living thing on earth. Three-quarters of every shovelful of coal went up as waste heat.</p>
+        </div>
+
+        <div class="era-quote-block print-reveal">
+          <blockquote>
+            "The first factories didn't just produce goods — they produced a new kind of human being: the wage worker."
+          </blockquote>
+          <cite>— Industry 1.0 Historical Record</cite>
+        </div>
+
+        <div class="era-shift-box print-reveal">
+          <div class="shift-label">WORKFORCE SHIFT</div>
+          <div class="shift-row">
+            <span class="shift-from">Farm labourer</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Factory hand</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Village life</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Urban slums</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Seasonal rhythm</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">12-hr shifts</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-foot print-reveal">
+        <div class="era-key-fact-strip">
+          <div class="kf-item">
+            <span class="kf-label">ENERGY SOURCE</span>
+            <span class="kf-val">STEAM / COAL / WATER</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">KEY INVENTION</span>
+            <span class="kf-val">STEAM ENGINE (WATT, 1769)</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">DEFINING CHANGE</span>
+            <span class="kf-val">URBANISATION + MASS PRODUCTION</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="era-transition-bar">
+      <span class="dm-mono">END OF ERA 01 — TURNING PAGE</span>
+      <div class="transition-rule"></div>
+    </div>
+  </section>
+
+  <!-- ========= ERA 2.0 ========= -->
+  <section class="era-section" id="era2" data-era="2">
+    <div class="era-print-header">
+      <div class="era-stamp reveal-stamp">ERA 02</div>
+      <div class="era-year-band">
+        <span class="dm-mono">1870 — 1914</span>
+      </div>
+      <div class="era-unlock-badge" id="unlock2">✦ UNLOCKED</div>
+    </div>
+
+    <div class="era-columns col-2">
+
+      <div class="col-main">
+        <h2 class="era-headline print-reveal">
+          THE WIRE<br>THAT LIT<br>UP THE<br>WORLD
+        </h2>
+        <div class="col-rule"></div>
+        <p class="era-body print-reveal">
+          Electricity changed everything — not just in factories, but in the fundamental texture of daily life. For the first time in human history, the workday was no longer bounded by sunlight.
+        </p>
+        <p class="era-body print-reveal">
+          Henry Ford's assembly line, introduced in 1913, took this power and mechanised human labour to a degree that would have seemed like science fiction to a worker from 1800. A Model T that once took twelve hours to build could now be assembled in ninety-three minutes. The world didn't just move faster — it moved at a pace that made everything before it look like standing still.
+        </p>
+        <p class="era-body print-reveal">
+          Industry 2.0 birthed the middle class. Mass production meant affordable goods. Affordable goods meant purchasing power. Purchasing power meant a new kind of worker — one who could buy what they built.
+        </p>
+        <p class="era-body print-reveal">
+          Pennsylvania Railroad's 1886 "Supplying Department" — the first formal procurement organisation in history — appeared in this era. Even the way companies <em>bought things</em> had to be reinvented.
+        </p>
+      </div>
+
+      <div class="col-side">
+        <div class="classified-box print-reveal">
+          <div class="classified-label">CLASSIFIED DETAIL</div>
+          <p>Ford's 1913 assembly line cut Model T build time from <strong>12 hours to 93 minutes</strong>. The same car, the same workers — but the system had been fundamentally rewired.</p>
+        </div>
+
+        <div class="stat-callout print-reveal">
+          <div class="sc-num counter" data-target="1886">0</div>
+          <div class="sc-label">Year of first formal corporate procurement dept.<br><span class="dm-mono">(Pennsylvania Railroad)</span></div>
+        </div>
+
+        <div class="era-shift-box print-reveal">
+          <div class="shift-label">WORKFORCE SHIFT</div>
+          <div class="shift-row">
+            <span class="shift-from">Manual craftsman</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Assembly line worker</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Single trade</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Specialized role</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Subsistence wage</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Middle class income</span>
+          </div>
+        </div>
+
+        <div class="era-key-fact-strip print-reveal" style="margin-top:2rem;">
+          <div class="kf-item">
+            <span class="kf-label">ENERGY SOURCE</span>
+            <span class="kf-val">ELECTRICITY / OIL</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">KEY INVENTION</span>
+            <span class="kf-val">ASSEMBLY LINE + AC POWER</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">DEFINING CHANGE</span>
+            <span class="kf-val">MASS PRODUCTION + MIDDLE CLASS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="era-transition-bar">
+      <span class="dm-mono">END OF ERA 02 — TURNING PAGE</span>
+      <div class="transition-rule"></div>
+    </div>
+  </section>
+
+  <!-- ========= ERA 3.0 ========= -->
+  <section class="era-section" id="era3" data-era="3">
+    <div class="era-print-header">
+      <div class="era-stamp reveal-stamp">ERA 03</div>
+      <div class="era-year-band">
+        <span class="dm-mono">1960s — 2000s</span>
+      </div>
+      <div class="era-unlock-badge" id="unlock3">✦ UNLOCKED</div>
+    </div>
+
+    <div class="era-columns col-2">
+
+      <div class="col-main">
+        <h2 class="era-headline print-reveal">
+          THE MACHINE<br>LEARNED<br>TO THINK
+        </h2>
+        <div class="col-rule"></div>
+        <p class="era-body print-reveal">
+          The first two revolutions replaced human muscle. The third one went further. It began replacing human decision-making — at least, the repetitive, rule-bound kind.
+        </p>
+        <p class="era-body print-reveal">
+          Programmable Logic Controllers arrived in 1969. For the first time, a machine could be told: "if this condition is true, do this." Robots entered factory floors not as novelties but as the cheapest, most reliable workers money could buy — no breaks, no unions, no errors.
+        </p>
+        <p class="era-body print-reveal">
+          The internet arrived and rewired global commerce. Freemarkets.com launched the first digital reverse auctions in 1995, changing how corporations sourced everything from raw materials to components. The supply chain — invisible to most people — became the circulatory system of the global economy.
+        </p>
+        <p class="era-body print-reveal">
+          But here was Industry 3.0's silent price: it displaced workers faster than it created new jobs. Factories that once employed hundreds ran with dozens. Entire skilled trades — tool-and-die, machining, precision assembly — began to vanish. Progress, yes. But progress that left a human cost in its wake.
+        </p>
+      </div>
+
+      <div class="col-side">
+        <div class="classified-box print-reveal">
+          <div class="classified-label">CLASSIFIED DETAIL</div>
+          <p>Industry 3.0 introduced the first online reverse auctions via <strong>Freemarkets.com (1995)</strong> — suddenly, every supplier on earth was competing in real time. Price transparency hit like a shockwave.</p>
+        </div>
+
+        <div class="era-quote-block print-reveal">
+          <blockquote>
+            "Excessive automation at Tesla was a mistake. Humans are underrated."
+          </blockquote>
+          <cite>— Elon Musk, reflecting on over-automation</cite>
+        </div>
+
+        <div class="era-shift-box print-reveal">
+          <div class="shift-label">WORKFORCE SHIFT</div>
+          <div class="shift-row">
+            <span class="shift-from">Skilled machinist</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">PLC programmer</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Manual bookkeeper</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">ERP operator</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Physical catalogue</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Digital procurement</span>
+          </div>
+        </div>
+
+        <div class="era-key-fact-strip print-reveal" style="margin-top:2rem;">
+          <div class="kf-item">
+            <span class="kf-label">ENERGY SOURCE</span>
+            <span class="kf-val">ELECTRICITY + EARLY RENEWABLES</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">KEY INVENTION</span>
+            <span class="kf-val">PLC, ROBOTS, INTERNET</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">DEFINING CHANGE</span>
+            <span class="kf-val">AUTOMATION + DIGITAL COMMERCE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="era-transition-bar">
+      <span class="dm-mono">END OF ERA 03 — TURNING PAGE</span>
+      <div class="transition-rule"></div>
+    </div>
+  </section>
+
+  <!-- ========= ERA 4.0 ========= -->
+  <section class="era-section" id="era4" data-era="4">
+    <div class="era-print-header">
+      <div class="era-stamp reveal-stamp">ERA 04</div>
+      <div class="era-year-band">
+        <span class="dm-mono">2010s — PRESENT</span>
+      </div>
+      <div class="era-unlock-badge" id="unlock4">✦ UNLOCKED</div>
+    </div>
+
+    <div class="era-columns col-1">
+
+      <div class="col-main col-full">
+        <h2 class="era-headline print-reveal era-headline-xl">
+          EVERYTHING<br>CONNECTED.<br>EVERYTHING<br>TALKING.
+        </h2>
+        <div class="col-rule"></div>
+      </div>
+
+      <div class="col-two-up">
+        <div>
+          <p class="era-body print-reveal">
+            Industry 4.0 didn't just upgrade the factory — it dissolved its walls. When Rolls-Royce fitted IoT sensors to jet engines so they could predict failures before they happened, the factory floor had effectively expanded into the sky above every commercial flight on earth. The concept of "local" manufacturing ceased to mean anything.
+          </p>
+          <p class="era-body print-reveal">
+            BMW introduced collaborative robots — cobots — that worked side by side with humans on the production line. GE deployed digital twins: full virtual replicas of physical machines, running in parallel, predicting failure and optimising performance in real time. DHL built smart logistics networks where every package knew where it was and when it would arrive before a human looked at a screen.
+          </p>
+        </div>
+        <div>
+          <p class="era-body print-reveal">
+            And yet — Industry 4.0 had a dirty secret that McKinsey eventually quantified: fewer than 10% of companies attempting advanced process control actually extracted strong value from it. BCG confirmed that only 5% of firms piloting AI initiatives achieved meaningful returns at scale.
+          </p>
+          <p class="era-body print-reveal">
+            The machines were talking to each other. But nobody had stopped to ask: were humans still part of the conversation? Operators became passive monitors. Skills were trained around tools rather than judgment. The efficiency metrics looked incredible. The humans running the systems felt increasingly like spectators in their own factories.
+          </p>
+          <p class="era-body print-reveal">
+            Industry 4.0 connected everything. It just forgot to ask who it was all for.
+          </p>
+        </div>
+      </div>
+
+      <div class="era-cards-row print-reveal">
+        <div class="era-card">
+          <div class="ec-icon">⚙</div>
+          <div class="ec-title">ROLLS-ROYCE</div>
+          <p class="ec-body">IoT sensors on jet engines predict failures before they happen — mid-flight, in real time.</p>
+        </div>
+        <div class="era-card">
+          <div class="ec-icon">🤖</div>
+          <div class="ec-title">BMW COBOTS</div>
+          <p class="ec-body">Collaborative robots handle heavy lifting on the production line — humans do the dexterous work.</p>
+        </div>
+        <div class="era-card">
+          <div class="ec-icon">🪞</div>
+          <div class="ec-title">GE DIGITAL TWINS</div>
+          <p class="ec-body">Virtual machine replicas run in parallel with physical ones, optimising performance in real time.</p>
+        </div>
+        <div class="era-card">
+          <div class="ec-icon">📦</div>
+          <div class="ec-title">DHL LOGISTICS</div>
+          <p class="ec-body">Smart logistics networks where every package tracks its own journey before a human checks a screen.</p>
+        </div>
+      </div>
+
+      <div class="era-stat-row print-reveal">
+        <div class="stat-callout">
+          <div class="sc-num">&#60;10%</div>
+          <div class="sc-label">of firms extracting strong value from advanced process control<br><span class="dm-mono">(McKinsey)</span></div>
+        </div>
+        <div class="stat-callout">
+          <div class="sc-num">5%</div>
+          <div class="sc-label">of companies achieving meaningful AI returns at scale<br><span class="dm-mono">(BCG)</span></div>
+        </div>
+        <div class="stat-callout">
+          <div class="sc-num counter" data-target="2011">0</div>
+          <div class="sc-label">Year Industry 4.0 was born — coined in Germany<br><span class="dm-mono">(Hannover Messe)</span></div>
+        </div>
+      </div>
+
+      <div class="versus-block print-reveal">
+        <div class="vs-col vs-left">
+          <div class="vs-label dm-mono">INDUSTRY 4.0 SAID</div>
+          <ul class="vs-list">
+            <li>Machines control the system</li>
+            <li>Humans monitor screens</li>
+            <li>Efficiency above all</li>
+            <li>Automate everything possible</li>
+            <li>Scale = success</li>
+          </ul>
+        </div>
+        <div class="vs-divider">VS</div>
+        <div class="vs-col vs-right">
+          <div class="vs-label dm-mono">WHAT ACTUALLY HAPPENED</div>
+          <ul class="vs-list">
+            <li>Only 5% got real AI value</li>
+            <li>Operators felt like spectators</li>
+            <li>Skills eroded by tool-dependence</li>
+            <li>Customer satisfaction dropped</li>
+            <li>Human judgment was underused</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="era-key-fact-strip print-reveal" style="margin-top:2rem;">
+        <div class="kf-item">
+          <span class="kf-label">ENERGY SOURCE</span>
+          <span class="kf-val">ELECTRICITY + RENEWABLES</span>
+        </div>
+        <div class="kf-item">
+          <span class="kf-label">KEY INVENTION</span>
+          <span class="kf-val">IoT, AI, CLOUD, DIGITAL TWINS</span>
+        </div>
+        <div class="kf-item">
+          <span class="kf-label">DEFINING CHANGE</span>
+          <span class="kf-val">HYPER-CONNECTED SMART FACTORIES</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="era-transition-bar">
+      <span class="dm-mono">END OF ERA 04 — FINAL PAGE LOADING</span>
+      <div class="transition-rule"></div>
+    </div>
+  </section>
+
+  <!-- ========= ERA 5.0 ========= -->
+  <section class="era-section era-5" id="era5" data-era="5">
+    <div class="era-print-header">
+      <div class="era-stamp reveal-stamp era5-stamp">ERA 05</div>
+      <div class="era-year-band">
+        <span class="dm-mono">2021 — THE FUTURE</span>
+      </div>
+      <div class="era-unlock-badge" id="unlock5">✦ UNLOCKED</div>
+    </div>
+
+    <div class="era-columns col-2">
+      <div class="col-main">
+        <h2 class="era-headline print-reveal">
+          THE MACHINE<br>FINALLY<br>CAME HOME
+        </h2>
+        <div class="col-rule"></div>
+        <p class="era-body print-reveal">
+          In 2021, the European Commission did something unexpected. It didn't announce a new technology. It announced a new <em>purpose</em>. Industry 5.0 was formally defined not by what machines could do — but by what they should do, and for whom.
+        </p>
+        <p class="era-body print-reveal">
+          The three pillars: <strong>Human-centric.</strong> <strong>Sustainable.</strong> <strong>Resilient.</strong> After 260 years of asking "how fast can we go?" — Industry 5.0 finally asked "but should we?"
+        </p>
+        <p class="era-body print-reveal">
+          Mercedes-Benz, building the S-Class, made a decision that would have been unthinkable in 4.0: they deliberately <em>reduced</em> automation. Because the dexterous, judgment-rich process of assembling a luxury vehicle couldn't be done better by a robot than by a skilled human. The machine stepped back. The craftsperson stepped forward.
+        </p>
+        <p class="era-body print-reveal">
+          Nike combined AI systems with human designers — not to replace creative judgment, but to augment it. The AI handles the data, the iteration, the options. The human decides what's beautiful, what's meaningful, what tells a story worth wearing.
+        </p>
+        <p class="era-body print-reveal">
+          This is the defining insight of Industry 5.0: the most powerful factory is not the most automated one. It is the one where technology frees human creativity to be its most human.
+        </p>
+      </div>
+
+      <div class="col-side">
+        <div class="three-pillars print-reveal">
+          <div class="pillar-title dm-mono">THE THREE PILLARS</div>
+          <div class="pillar">
+            <div class="pillar-num">I</div>
+            <div class="pillar-content">
+              <strong>HUMAN-CENTRIC</strong>
+              <p>Workers are assets, not costs. Technology serves people — not the other way around.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">II</div>
+            <div class="pillar-content">
+              <strong>SUSTAINABLE</strong>
+              <p>Circular economies. Waste converted to resource. UN SDGs baked into manufacturing DNA.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">III</div>
+            <div class="pillar-content">
+              <strong>RESILIENT</strong>
+              <p>Supply chains that bend without breaking. Systems designed for crises, not just calm days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="classified-box print-reveal" style="margin-top:1.5rem;">
+          <div class="classified-label">CLASSIFIED DETAIL</div>
+          <p>The Industry 5.0 market is projected to reach <strong>$129.1 billion</strong>. Personalisation and sustainability are no longer nice-to-have — they are the competitive moat.</p>
+        </div>
+
+        <div class="era-shift-box print-reveal" style="margin-top:1.5rem;">
+          <div class="shift-label">WORKFORCE SHIFT</div>
+          <div class="shift-row">
+            <span class="shift-from">Screen monitor</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Creative partner</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Task executor</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Problem solver</span>
+          </div>
+          <div class="shift-row">
+            <span class="shift-from">Replaced by machine</span>
+            <span class="shift-arrow">→</span>
+            <span class="shift-to">Empowered by machine</span>
+          </div>
+        </div>
+
+        <div class="stat-callout print-reveal" style="margin-top:1.5rem;">
+          <div class="sc-num">45%</div>
+          <div class="sc-label">of executives say human-AI collaboration skills are now critical<br><span class="dm-mono">(Deloitte, 2021)</span></div>
+        </div>
+
+        <div class="era-key-fact-strip print-reveal" style="margin-top:1.5rem;">
+          <div class="kf-item">
+            <span class="kf-label">ENERGY SOURCE</span>
+            <span class="kf-val">RENEWABLES + CIRCULAR SYSTEMS</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">KEY INVENTION</span>
+            <span class="kf-val">COBOTS, NANOTECH, BIOTECH</span>
+          </div>
+          <div class="kf-item">
+            <span class="kf-label">DEFINING CHANGE</span>
+            <span class="kf-val">HUMAN JUDGMENT RETURNS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPANY SPOTLIGHTS -->
+    <div class="company-spotlights print-reveal">
+      <div class="cs-header dm-mono">INDUSTRY 5.0 IN THE WILD</div>
+      <div class="cs-grid">
+        <div class="cs-card">
+          <div class="cs-brand">MERCEDES-BENZ</div>
+          <p>Deliberately reduced automation on the S-Class line. Human craftspeople assemble what robots cannot — with dexterity, judgment, and pride.</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-brand">NIKE</div>
+          <p>AI handles iteration and data. Human designers decide what's worth making. The result: custom footwear that feels personal, not algorithmic.</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-brand">BMW</div>
+          <p>Cobots handle the dangerous and repetitive. Humans handle the complex and creative. The factory line becomes a collaboration, not a competition.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========= FINAL PULLQUOTE ========= -->
+  <section class="final-quote-section">
+    <div class="fq-inner">
+      <div class="fq-rule"></div>
+      <blockquote class="final-quote print-reveal">
+        "The question is no longer:<br>
+        <em>Can the machine do it?</em><br>
+        The question is:<br>
+        <em>How can it help us do something worth doing?</em>"
+      </blockquote>
+      <div class="fq-rule"></div>
+      <p class="fq-sub dm-mono print-reveal">— THE GREAT MACHINE / END OF ARCHIVE —</p>
+    </div>
+  </section>
+
+  <!-- ========= FULL TIMELINE ========= -->
+  <section class="timeline-section print-reveal">
+    <div class="tl-header dm-mono">THE FULL TIMELINE — 1760 TO NOW</div>
+    <div class="timeline-track">
+      <div class="tl-node" data-era="1">
+        <div class="tl-dot"></div>
+        <div class="tl-info">
+          <span class="tl-yr">1760</span>
+          <span class="tl-name">Industry 1.0</span>
+          <span class="tl-desc">Steam & Coal</span>
+        </div>
+      </div>
+      <div class="tl-line"></div>
+      <div class="tl-node" data-era="2">
+        <div class="tl-dot"></div>
+        <div class="tl-info">
+          <span class="tl-yr">1870</span>
+          <span class="tl-name">Industry 2.0</span>
+          <span class="tl-desc">Electricity</span>
+        </div>
+      </div>
+      <div class="tl-line"></div>
+      <div class="tl-node" data-era="3">
+        <div class="tl-dot"></div>
+        <div class="tl-info">
+          <span class="tl-yr">1969</span>
+          <span class="tl-name">Industry 3.0</span>
+          <span class="tl-desc">Computers</span>
+        </div>
+      </div>
+      <div class="tl-line"></div>
+      <div class="tl-node" data-era="4">
+        <div class="tl-dot"></div>
+        <div class="tl-info">
+          <span class="tl-yr">2011</span>
+          <span class="tl-name">Industry 4.0</span>
+          <span class="tl-desc">The Network</span>
+        </div>
+      </div>
+      <div class="tl-line"></div>
+      <div class="tl-node tl-node-active" data-era="5">
+        <div class="tl-dot"></div>
+        <div class="tl-info">
+          <span class="tl-yr">2021</span>
+          <span class="tl-name">Industry 5.0</span>
+          <span class="tl-desc">The Human Era</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORS SECTION -->
+  <section class="authors-section">
+    <div class="authors-inner">
+      <div class="authors-kicker dm-mono">RESEARCHED &amp; WRITTEN BY</div>
+      <div class="authors-grid">
+        <div class="author-card">
+          <div class="author-index dm-mono">01</div>
+          <div class="author-name">Shreeviraj</div>
+          <div class="author-rule"></div>
+        </div>
+        <div class="author-card">
+          <div class="author-index dm-mono">02</div>
+          <div class="author-name">Vedant</div>
+          <div class="author-rule"></div>
+        </div>
+        <div class="author-card">
+          <div class="author-index dm-mono">03</div>
+          <div class="author-name">Pragati</div>
+          <div class="author-rule"></div>
+        </div>
+        <div class="author-card">
+          <div class="author-index dm-mono">04</div>
+          <div class="author-name">Mahi</div>
+          <div class="author-rule"></div>
+        </div>
+      </div>
+      <div class="authors-footer-line dm-mono">THE INDUSTRIAL CHRONICLES · VOL. I · 2025</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-title dm-mono">THE GREAT MACHINE</div>
+      <div class="footer-sub">Industry 1.0 to 5.0 — A Research Chronicle</div>
+      <div class="footer-sources dm-mono">22 SOURCES · CROSS-REFERENCED · DECODED FOR HUMAN READING</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
