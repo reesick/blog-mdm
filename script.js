@@ -389,19 +389,17 @@
   }
 
   function pickPositions(n, total) {
-    // deterministic but visually scattered
+    // Cluster filled cells at the bottom-left so the proportion is instantly readable
     const s = new Set();
     if (n <= 0) return s;
-    const step = Math.max(1, Math.floor(total / n));
-    let i = Math.floor(step / 2);
-    while (s.size < n && i < total) {
-      s.add(i);
-      i += step;
-    }
-    let k = 7;
-    while (s.size < n) {
-      if (!s.has(k % total)) s.add(k % total);
-      k += 13;
+    const cols = 10;
+    const rows = Math.ceil(total / cols);
+    let placed = 0;
+    for (let r = rows - 1; r >= 0 && placed < n; r--) {
+      for (let c = 0; c < cols && placed < n; c++) {
+        s.add(r * cols + c);
+        placed++;
+      }
     }
     return s;
   }
