@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>THE GREAT MACHINE — Industry 1.0 to 5.0</title>
+  <title>THE GREAT MACHINE · Industry 1.0 to 5.0</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,44 +18,20 @@
     <div class="progress-bar-track">
       <div class="progress-bar-fill" id="progressFill"></div>
     </div>
-    <div class="progress-label" id="progressLabel">ERA 00 — LOADING</div>
+    <div class="progress-label" id="progressLabel">ERA 00 · LOADING</div>
   </div>
-
-  <!-- ERA NAVIGATOR -->
-  <nav class="era-nav" id="erNav">
-    <div class="era-nav-title">NAVIGATE</div>
-    <a href="#era1" class="era-nav-item" data-era="1">
-      <span class="era-nav-num">01</span>
-      <span class="era-nav-name">STEAM & COAL</span>
-    </a>
-    <a href="#era2" class="era-nav-item" data-era="2">
-      <span class="era-nav-num">02</span>
-      <span class="era-nav-name">ELECTRICITY</span>
-    </a>
-    <a href="#era3" class="era-nav-item" data-era="3">
-      <span class="era-nav-num">03</span>
-      <span class="era-nav-name">COMPUTERS</span>
-    </a>
-    <a href="#era4" class="era-nav-item" data-era="4">
-      <span class="era-nav-num">04</span>
-      <span class="era-nav-name">THE NET</span>
-    </a>
-    <a href="#era5" class="era-nav-item" data-era="5">
-      <span class="era-nav-num">05</span>
-      <span class="era-nav-name">HUMAN ERA</span>
-    </a>
-    <div class="era-nav-counter" id="eraCounter">UNCOVERED: <strong>0 / 5</strong></div>
-  </nav>
 
   <!-- ========= HERO / OPENER ========= -->
   <section class="hero" id="hero">
+    <div class="hero-bg-image" aria-hidden="true"
+         style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Philipp_Jakob_Loutherbourg_d._J._002.jpg/1920px-Philipp_Jakob_Loutherbourg_d._J._002.jpg');"></div>
     <div class="hero-grid-lines" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
     <div class="hero-inner">
       <div class="hero-kicker">
         <span class="kicker-stamp">CLASSIFIED ARCHIVE</span>
-        <span class="kicker-dash">—</span>
+        <span class="kicker-dash">·</span>
         <span class="kicker-sub" id="heroLoader">LOADING ERA 01 OF 05<span class="cursor">_</span></span>
       </div>
       <h1 class="hero-title">
@@ -65,10 +41,10 @@
       </h1>
       <div class="hero-sub-row">
         <div class="hero-dateline">
-          <span class="dm-mono">1760 — PRESENT</span>
+          <span class="dm-mono">1760 → PRESENT</span>
         </div>
         <p class="hero-deck">
-          Two hundred and sixty years. Five revolutions. One unbroken story of what happens when humans decide the world isn't moving fast enough — and build something to change that.
+          Two hundred and sixty years. Five revolutions. One unbroken story of what happens when humans decide the world isn't moving fast enough, and build something to change that.
         </p>
       </div>
       <div class="hero-meta-row">
@@ -90,7 +66,80 @@
         <div class="scroll-arrow">↓</div>
       </div>
     </div>
-    <div class="hero-vol-tag">VOL. I — THE INDUSTRIAL CHRONICLES</div>
+    <div class="hero-vol-tag">VOL. I · THE INDUSTRIAL CHRONICLES</div>
+  </section>
+
+  <!-- ========= V1: HERO CHART · THE ACCELERATION CURVE ========= -->
+  <section class="chart-hero-section">
+    <div class="chart-intro">
+      <span class="kicker-stamp">FIG 01 · THE ANCHOR GRAPH</span>
+      <h2>260 YEARS. ONE CURVE.</h2>
+      <p>Human prosperity crawled in a near-flat line for most of recorded history. Then, in 1760, something happened, and the graph never looked the same again. Every dashed marker below is an era you're about to read.</p>
+    </div>
+    <div class="chart-block" data-fig="FIG 01 · HERO" data-chart="v1">
+      <div class="chart-title">THE ACCELERATION CURVE</div>
+      <div class="chart-sub">GLOBAL GDP PER CAPITA · 1760 – 2025 · MADDISON PROJECT</div>
+
+      <svg viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block">
+        <defs>
+          <pattern id="hatchHero" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+            <line class="hatch-line" x1="0" y1="0" x2="0" y2="7" stroke-width="1.2"/>
+          </pattern>
+        </defs>
+
+        <rect x="60" y="20" width="810" height="300" fill="none" class="axis" stroke-width="2"/>
+
+        <line x1="60" y1="80"  x2="870" y2="80"  class="gridline"/>
+        <line x1="60" y1="140" x2="870" y2="140" class="gridline"/>
+        <line x1="60" y1="200" x2="870" y2="200" class="gridline"/>
+        <line x1="60" y1="260" x2="870" y2="260" class="gridline"/>
+
+        <text x="52" y="84"  text-anchor="end" font-size="10">$16K</text>
+        <text x="52" y="144" text-anchor="end" font-size="10">$12K</text>
+        <text x="52" y="204" text-anchor="end" font-size="10">$8K</text>
+        <text x="52" y="264" text-anchor="end" font-size="10">$4K</text>
+        <text x="52" y="323" text-anchor="end" font-size="10">$0</text>
+
+        <line x1="120" y1="20" x2="120" y2="320" class="era-marker"/>
+        <text x="125" y="34" class="era-label">01 · 1760 STEAM</text>
+
+        <line x1="300" y1="20" x2="300" y2="320" class="era-marker"/>
+        <text x="305" y="34" class="era-label">02 · 1870 ELECTRICITY</text>
+
+        <line x1="560" y1="20" x2="560" y2="320" class="era-marker"/>
+        <text x="565" y="34" class="era-label">03 · 1969 COMPUTERS</text>
+
+        <line x1="740" y1="20" x2="740" y2="320" class="era-marker"/>
+        <text x="745" y="34" class="era-label">04 · 2011 NET</text>
+
+        <text x="760" y="50" class="era-label" text-anchor="start">05 · 2021 HUMAN</text>
+        <line x1="820" y1="20" x2="820" y2="320" class="era-marker"/>
+
+        <path class="area-reveal"
+              d="M 120 314 L 180 313 L 240 311 L 300 305 L 360 295 L 420 280 L 480 255 L 540 225 L 600 195 L 660 155 L 720 115 L 780 80 L 820 55 L 860 40 L 860 320 L 120 320 Z"
+              fill="url(#hatchHero)" opacity="0.35"/>
+
+        <path class="data-line line-draw"
+              d="M 120 314 L 180 313 L 240 311 L 300 305 L 360 295 L 420 280 L 480 255 L 540 225 L 600 195 L 660 155 L 720 115 L 780 80 L 820 55 L 860 40"
+              style="stroke-dasharray:1400;stroke-dashoffset:1400"/>
+
+        <circle class="data-point point-fade" data-delay="1" cx="120" cy="314" r="5"/>
+        <circle class="data-point point-fade" data-delay="2" cx="300" cy="305" r="5"/>
+        <circle class="data-point point-fade" data-delay="3" cx="560" cy="215" r="5"/>
+        <circle class="data-point point-fade" data-delay="4" cx="740" cy="95"  r="5"/>
+        <circle class="data-point data-point-solid point-fade" data-delay="5" cx="820" cy="55" r="6"/>
+
+        <text x="120" y="340" text-anchor="middle" font-size="10">1760</text>
+        <text x="300" y="340" text-anchor="middle" font-size="10">1870</text>
+        <text x="560" y="340" text-anchor="middle" font-size="10">1969</text>
+        <text x="740" y="340" text-anchor="middle" font-size="10">2011</text>
+        <text x="820" y="340" text-anchor="middle" font-size="10">2021</text>
+
+        <text x="465" y="365" text-anchor="middle" font-size="10" class="chart-annotation" style="fill:#c8c4bc">FLAT FOR CENTURIES · THEN VERTICAL</text>
+      </svg>
+
+      <div class="chart-caption">DATA · MADDISON PROJECT DATABASE 2023 (GDP PER CAPITA, 2011 USD). FIVE ERAS OVERLAID.</div>
+    </div>
   </section>
 
   <!-- ========= ERA 1.0 ========= -->
@@ -98,10 +147,20 @@
     <div class="era-print-header">
       <div class="era-stamp reveal-stamp">ERA 01</div>
       <div class="era-year-band">
-        <span class="dm-mono">1760 — 1840</span>
+        <span class="dm-mono">1760 / 1840</span>
       </div>
       <div class="era-unlock-badge" id="unlock1">✦ UNLOCKED</div>
     </div>
+
+    <figure class="archive-plate plate-full" data-plate="PLATE I · ERA 01">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Interior_of_a_cotton_mill_1909.jpg"
+           alt="Interior of a cotton mill, early 20th century, women tending rows of spinning machinery"
+           loading="lazy">
+      <figcaption>
+        <span>LANCASHIRE-ERA COTTON MILL INTERIOR · WORKERS TENDING MECHANISED SPINNING FRAMES</span>
+        <span class="credit">WIKIMEDIA · PUBLIC DOMAIN</span>
+      </figcaption>
+    </figure>
 
     <div class="era-columns col-3">
 
@@ -111,27 +170,71 @@
         </h2>
         <div class="col-rule"></div>
         <p class="era-body print-reveal">
-          Before 1760, if you wanted a shirt, someone made it by hand. If you wanted iron, a blacksmith beat it out of ore, one piece at a time. The world moved at the speed of muscle and wind — and that was simply how things were.
+          Before 1760, if you wanted a shirt, someone made it by hand. If you wanted iron, a blacksmith beat it out of ore, one piece at a time. The world moved at the speed of muscle and wind, and that was simply how things were.
         </p>
         <p class="era-body print-reveal">
-          Then James Watt refined the steam engine in 1769. It sounds like a minor technical upgrade. It was not. It was the moment humanity stopped being limited by the energy of living bodies and started harnessing something vastly, terrifyingly more powerful.
+          Then James Watt patented his separate-condenser steam engine on 5 January 1769.<sup class="cite-ref"><a href="https://en.wikipedia.org/wiki/Watt_steam_engine" target="_blank" rel="noopener">[1]</a></sup> It sounds like a minor technical upgrade. It was not. It was the moment humanity stopped being limited by the energy of living bodies and started harnessing something vastly, terrifyingly more powerful.
         </p>
         <p class="era-body print-reveal">
-          Steam engines ran at just 20–25% efficiency — wasting three-quarters of every unit of coal burned. And yet, they were still faster, stronger, and more tireless than any human or horse alive. The factory didn't just change how things were made. It changed where people lived, how families worked, and what a human life was worth in the market.
+          Watt's 1769 separate-condenser engine was barely 2–3% thermally efficient,<sup class="cite-ref"><a href="https://en.wikipedia.org/wiki/Watt_steam_engine" target="_blank" rel="noopener">[1]</a></sup> but it cut coal use by roughly three-quarters versus Newcomen's earlier design. And yet, even that small flame was faster, stronger, and more tireless than any human or horse alive. The factory didn't just change how things were made. It changed where people lived, how families worked, and what a human life was worth in the market.
         </p>
+        <p class="era-body print-reveal">
+          The Luddites were not anti-technology. They were skilled weavers who understood exactly what was coming. Between 1811 and 1816, they smashed the frames not out of ignorance but out of despair. A craft that had taken a lifetime to master was being replaced overnight, at a fraction of the cost, by a machine that needed no sleep, demanded no wage, and felt nothing.
+        </p>
+        <p class="era-body print-reveal">
+          By 1840, Britain was producing half the world's iron and cotton. Manchester's population doubled, then doubled again. A rural England that had existed for centuries dissolved in a single generation, not gradually but in a series of shocks that remade the social fabric of an entire nation. The steam engine did not merely power the factories. It powered everything that came after.
+        </p>
+
+        <div class="era-quote-block print-reveal">
+          <blockquote>"The factory didn't just change how things were made. It determined where you were born, how long you lived, and what your children would become."</blockquote>
+          <cite>· Social history of the Industrial Revolution</cite>
+        </div>
+
+        <div class="mini-stat-card print-reveal" style="margin-top:1.5rem;">
+          <div class="msc-label">BY 1840</div>
+          <div class="msc-figure">50%</div>
+          <div class="msc-body">Britain produced half the world's iron and cotton output — on an island the size of a single American state.</div>
+          <div class="msc-source"><a href="https://www.britannica.com/event/Industrial-Revolution" target="_blank" rel="noopener">SRC · Britannica / Industrial Revolution</a></div>
+        </div>
       </div>
 
       <div class="col-side">
+        <figure class="archive-plate plate-inline" data-plate="FIG · PORTRAIT">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/James_Watt_by_Henry_Howard.jpg/960px-James_Watt_by_Henry_Howard.jpg"
+               alt="James Watt (1736–1819), portrait by Henry Howard"
+               loading="lazy">
+          <figcaption>
+            <span>JAMES WATT · 1736–1819</span>
+            <span class="credit">H. HOWARD · NPG</span>
+          </figcaption>
+        </figure>
+
         <div class="classified-box print-reveal">
           <div class="classified-label">CLASSIFIED DETAIL</div>
-          <p>Steam engines of the 1760s ran at only <strong>20–25% efficiency</strong> — yet they still outworked every living thing on earth. Three-quarters of every shovelful of coal went up as waste heat.</p>
+          <p>Watt's 1769 engine was only <strong>~2–3% thermally efficient</strong>,<sup class="cite-ref"><a href="https://en.wikipedia.org/wiki/Watt_steam_engine" target="_blank" rel="noopener">[1]</a></sup> yet it doubled Newcomen's output and cut fuel use by 75%. The waste was vast — but the work it did was unprecedented.</p>
         </div>
 
-        <div class="era-quote-block print-reveal">
-          <blockquote>
-            "The first factories didn't just produce goods — they produced a new kind of human being: the wage worker."
-          </blockquote>
-          <cite>— Industry 1.0 Historical Record</cite>
+        <div class="chart-block" data-fig="FIG 02 · ERA 01" data-chart="v2" style="margin:1.5rem 0;padding:1.4rem 1rem 1rem">
+          <div class="chart-title" style="font-size:1.3rem">WHERE THE COAL WENT</div>
+          <div class="chart-sub">1760s STEAM-ENGINE ENERGY BUDGET</div>
+          <svg viewBox="0 0 260 220" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto">
+            <defs>
+              <pattern id="hatchDonut" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="5" stroke="#0a0a0a" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <!-- background ring (waste: 75%) -->
+            <circle cx="130" cy="110" r="70" fill="none" stroke="url(#hatchDonut)" stroke-width="36"/>
+            <!-- useful-work arc (25%) drawn via dash -->
+            <circle class="donut-ring" cx="130" cy="110" r="70" fill="none"
+                    stroke="#0a0a0a" stroke-width="36"
+                    stroke-dasharray="440" stroke-dashoffset="440"
+                    style="--c:440;--target:330;transform:rotate(-90deg);transform-origin:130px 110px"/>
+            <text x="130" y="105" text-anchor="middle" font-family="Bebas Neue" font-size="36" letter-spacing="2">25%</text>
+            <text x="130" y="125" text-anchor="middle" font-size="9" fill="#555" letter-spacing="1.5">USEFUL WORK</text>
+            <text x="130" y="205" text-anchor="middle" font-size="9" fill="#888" letter-spacing="1.5">75% WASTED AS HEAT</text>
+          </svg>
+          <div class="chart-caption">SRC · BOULTON &amp; WATT ENGINE TRIALS, LATE 18TH C.</div>
         </div>
 
         <div class="era-shift-box print-reveal">
@@ -173,8 +276,54 @@
 
     </div>
 
+    <div class="chart-block" data-fig="FIG 03 · ERA 01" data-chart="v3">
+      <div class="chart-title">THE GREAT MIGRATION</div>
+      <div class="chart-sub">BRITAIN · URBAN vs RURAL POPULATION SHARE · 1760 – 1840</div>
+      <svg viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto">
+        <defs>
+          <pattern id="hatchMig" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="6" stroke="#0a0a0a" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect x="60" y="20" width="810" height="220" fill="none" class="axis" stroke-width="2"/>
+
+        <!-- RURAL area (top/majority, shrinking) -->
+        <path class="area-reveal"
+              d="M 60 40 L 220 52 L 380 75 L 540 115 L 700 160 L 870 195 L 870 20 L 60 20 Z"
+              fill="url(#hatchMig)" opacity="0.5"/>
+        <!-- URBAN area (growing) -->
+        <path class="area-reveal"
+              d="M 60 40 L 220 52 L 380 75 L 540 115 L 700 160 L 870 195 L 870 240 L 60 240 Z"
+              fill="#0a0a0a" opacity="0.92"/>
+
+        <!-- Dividing line -->
+        <path class="data-line line-draw" style="stroke-dasharray:1000;stroke-dashoffset:1000;stroke:#f5f3ef;stroke-width:2"
+              d="M 60 40 L 220 52 L 380 75 L 540 115 L 700 160 L 870 195"/>
+
+        <!-- labels -->
+        <text x="120" y="150" fill="#f5f3ef" font-family="Bebas Neue" font-size="22" letter-spacing="2">URBAN</text>
+        <text x="680" y="60" font-family="Bebas Neue" font-size="22" letter-spacing="2" fill="#0a0a0a">RURAL</text>
+
+        <text x="60"  y="260" text-anchor="start"  font-size="10">1760</text>
+        <text x="380" y="260" text-anchor="middle" font-size="10">1800</text>
+        <text x="870" y="260" text-anchor="end"    font-size="10">1840</text>
+
+        <text x="465" y="285" text-anchor="middle" font-size="10" class="chart-annotation">FACTORIES PULLED PEOPLE INTO CITIES FASTER THAN ANY FORCE IN HISTORY</text>
+      </svg>
+      <div class="chart-caption">DATA · <a href="https://www.cambridge.org/core/books/population-history-of-england-15411871/" target="_blank" rel="noopener">WRIGLEY &amp; SCHOFIELD (1981), BRITISH POPULATION HISTORY</a>.</div>
+    </div>
+
+    <aside class="era-sources">
+      <div class="era-sources-label">SOURCES · ERA 01</div>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Watt_steam_engine" target="_blank" rel="noopener">Watt steam engine — historical thermal efficiency, 1769 patent.</a></li>
+        <li><a href="https://www.cambridge.org/core/books/population-history-of-england-15411871/" target="_blank" rel="noopener">Wrigley &amp; Schofield, The Population History of England 1541–1871 (1981).</a></li>
+        <li><a href="https://www.britannica.com/biography/James-Watt" target="_blank" rel="noopener">Britannica · James Watt biography &amp; engine impact.</a></li>
+      </ol>
+    </aside>
+
     <div class="era-transition-bar">
-      <span class="dm-mono">END OF ERA 01 — TURNING PAGE</span>
+      <span class="dm-mono">END OF ERA 01, TURNING PAGE</span>
       <div class="transition-rule"></div>
     </div>
   </section>
@@ -184,10 +333,20 @@
     <div class="era-print-header">
       <div class="era-stamp reveal-stamp">ERA 02</div>
       <div class="era-year-band">
-        <span class="dm-mono">1870 — 1914</span>
+        <span class="dm-mono">1870 / 1914</span>
       </div>
       <div class="era-unlock-badge" id="unlock2">✦ UNLOCKED</div>
     </div>
+
+    <figure class="archive-plate plate-full" data-plate="PLATE II · ERA 02">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/A-line1913.jpg"
+           alt="Ford Motor Company Model T assembly line, Highland Park Plant, 1913"
+           loading="lazy">
+      <figcaption>
+        <span>FORD ASSEMBLY LINE · HIGHLAND PARK, 1913, BUILD TIME COLLAPSES FROM 12 HRS TO 93 MIN</span>
+        <span class="credit">WIKIMEDIA · PUBLIC DOMAIN</span>
+      </figcaption>
+    </figure>
 
     <div class="era-columns col-2">
 
@@ -197,28 +356,37 @@
         </h2>
         <div class="col-rule"></div>
         <p class="era-body print-reveal">
-          Electricity changed everything — not just in factories, but in the fundamental texture of daily life. For the first time in human history, the workday was no longer bounded by sunlight.
+          Electricity changed everything, not just in factories, but in the fundamental texture of daily life. For the first time in human history, the workday was no longer bounded by sunlight.
         </p>
         <p class="era-body print-reveal">
-          Henry Ford's assembly line, introduced in 1913, took this power and mechanised human labour to a degree that would have seemed like science fiction to a worker from 1800. A Model T that once took twelve hours to build could now be assembled in ninety-three minutes. The world didn't just move faster — it moved at a pace that made everything before it look like standing still.
+          Henry Ford's assembly line, introduced in 1913,<sup class="cite-ref"><a href="https://www.thehenryford.org/explore/stories-of-innovation/model-t/" target="_blank" rel="noopener">[1]</a></sup> took this power and mechanised human labour to a degree that would have seemed like science fiction to a worker from 1800. A Model T that once took twelve hours to build could now be assembled in ninety-three minutes.<sup class="cite-ref"><a href="https://www.thehenryford.org/explore/stories-of-innovation/model-t/" target="_blank" rel="noopener">[1]</a></sup> The world didn't just move faster, it moved at a pace that made everything before it look like standing still.
         </p>
         <p class="era-body print-reveal">
-          Industry 2.0 birthed the middle class. Mass production meant affordable goods. Affordable goods meant purchasing power. Purchasing power meant a new kind of worker — one who could buy what they built.
+          Industry 2.0 birthed the middle class. Mass production meant affordable goods. Affordable goods meant purchasing power. Purchasing power meant a new kind of worker, one who could buy what they built.
         </p>
         <p class="era-body print-reveal">
-          Pennsylvania Railroad's 1886 "Supplying Department" — the first formal procurement organisation in history — appeared in this era. Even the way companies <em>bought things</em> had to be reinvented.
+          Pennsylvania Railroad's 1886 "Supplying Department",<sup class="cite-ref"><a href="https://en.wikipedia.org/wiki/History_of_supply_chain_management" target="_blank" rel="noopener">[2]</a></sup> the first formal procurement organisation in history, appeared in this era. Even the way companies <em>bought things</em> had to be reinvented.
         </p>
-      </div>
+        <p class="era-body print-reveal">
+          Tesla and Edison fought a war over the future of electricity — AC versus DC. Edison's direct current was powerful but limited in range. Tesla's alternating current could travel hundreds of miles. The stakes were not just commercial but civilisational. AC won, and with it came the modern grid, the modern city, and the modern notion of a fully electrified life. Industry 2.0 did not just mechanise production. It rewired the world.
+        </p>
 
-      <div class="col-side">
-        <div class="classified-box print-reveal">
-          <div class="classified-label">CLASSIFIED DETAIL</div>
-          <p>Ford's 1913 assembly line cut Model T build time from <strong>12 hours to 93 minutes</strong>. The same car, the same workers — but the system had been fundamentally rewired.</p>
-        </div>
+        <div class="chart-block" data-fig="FIG 04 · ERA 02" data-chart="v4">
+          <div class="chart-title">12 HOURS → 93 MINUTES</div>
+          <div class="chart-sub">MODEL T BUILD TIME · BEFORE &amp; AFTER FORD'S 1913 LINE</div>
 
-        <div class="stat-callout print-reveal">
-          <div class="sc-num counter" data-target="1886">0</div>
-          <div class="sc-label">Year of first formal corporate procurement dept.<br><span class="dm-mono">(Pennsylvania Railroad)</span></div>
+          <div class="bar-row">
+            <span class="br-label">PRE-1913 · CRAFT BUILD</span>
+            <span class="br-track"><span class="br-fill br-hatch" style="--w:1"></span></span>
+            <span class="br-value">720 MIN</span>
+          </div>
+          <div class="bar-row">
+            <span class="br-label">1913 · ASSEMBLY LINE</span>
+            <span class="br-track"><span class="br-fill" style="--w:0.129"></span></span>
+            <span class="br-value">93 MIN</span>
+          </div>
+
+          <div class="chart-caption">A 7.7× REDUCTION. SAME CAR. SAME WORKERS. DIFFERENT SYSTEM. · SRC · <a href="https://www.thehenryford.org/explore/stories-of-innovation/model-t/" target="_blank" rel="noopener">HENRY FORD MUSEUM / HERITAGE VAULT</a></div>
         </div>
 
         <div class="era-shift-box print-reveal">
@@ -254,12 +422,72 @@
             <span class="kf-val">MASS PRODUCTION + MIDDLE CLASS</span>
           </div>
         </div>
+
+      </div>
+
+      <div class="col-side">
+        <figure class="archive-plate plate-inline" data-plate="FIG · ERA 02">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Thomas_Edison2.jpg/960px-Thomas_Edison2.jpg"
+               alt="Thomas Edison, photographed c.1878"
+               loading="lazy">
+          <figcaption>
+            <span>THOMAS EDISON · 1847–1931</span>
+            <span class="credit">WIKIMEDIA · PD</span>
+          </figcaption>
+        </figure>
+
+        <div class="classified-box print-reveal">
+          <div class="classified-label">CLASSIFIED DETAIL</div>
+          <p>Ford's 1913 assembly line cut Model T build time from <strong>12 hours to 93 minutes</strong>. The same car, the same workers, but the system had been fundamentally rewired.</p>
+        </div>
+
+        <div class="chart-block" data-fig="FIG 05 · ERA 02" data-chart="v5" style="margin:1.5rem 0;padding:1.4rem 1rem 1rem">
+          <div class="chart-title" style="font-size:1.3rem">THE LIGHTS COME ON</div>
+          <div class="chart-sub">US HOUSEHOLD ELECTRIFICATION · 1880 – 1940</div>
+          <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto">
+            <rect x="30" y="15" width="270" height="140" fill="none" class="axis" stroke-width="1.5"/>
+            <line x1="30" y1="50" x2="300" y2="50" class="gridline"/>
+            <line x1="30" y1="85" x2="300" y2="85" class="gridline"/>
+            <line x1="30" y1="120" x2="300" y2="120" class="gridline"/>
+            <text x="25" y="54"  text-anchor="end" font-size="8">80%</text>
+            <text x="25" y="89"  text-anchor="end" font-size="8">50%</text>
+            <text x="25" y="124" text-anchor="end" font-size="8">20%</text>
+            <!-- S-curve: 1880 ~0%, 1900 ~3%, 1920 ~35%, 1940 ~79% -->
+            <path class="data-line line-draw"
+                  style="stroke-dasharray:500;stroke-dashoffset:500;stroke-width:2.5"
+                  d="M 30 152 Q 90 150 130 140 Q 170 125 210 85 Q 250 55 300 45"/>
+            <circle class="data-point point-fade" data-delay="1" cx="30" cy="152" r="3.5"/>
+            <circle class="data-point point-fade" data-delay="2" cx="130" cy="140" r="3.5"/>
+            <circle class="data-point point-fade" data-delay="3" cx="210" cy="85" r="3.5"/>
+            <circle class="data-point data-point-solid point-fade" data-delay="4" cx="300" cy="45" r="4"/>
+            <text x="30"  y="175" text-anchor="start" font-size="8">1880</text>
+            <text x="165" y="175" text-anchor="middle" font-size="8">1910</text>
+            <text x="300" y="175" text-anchor="end" font-size="8">1940</text>
+            <text x="165" y="194" text-anchor="middle" font-size="8" class="chart-annotation">THE WORKDAY WAS NO LONGER BOUNDED BY SUNLIGHT</text>
+          </svg>
+          <div class="chart-caption">SRC · US CENSUS HISTORICAL STATISTICS.</div>
+        </div>
+
+        <div class="stat-callout print-reveal">
+          <div class="sc-num counter" data-target="1886">0</div>
+          <div class="sc-label">Year of first formal corporate procurement dept.<br><span class="dm-mono">(Pennsylvania Railroad)</span></div>
+        </div>
+
       </div>
 
     </div>
 
+    <aside class="era-sources">
+      <div class="era-sources-label">SOURCES · ERA 02</div>
+      <ol>
+        <li><a href="https://www.thehenryford.org/explore/stories-of-innovation/model-t/" target="_blank" rel="noopener">The Henry Ford — Model T assembly line history (1913): 12 hrs → 93 min build time.</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/History_of_supply_chain_management" target="_blank" rel="noopener">Wikipedia — History of supply chain management: Pennsylvania Railroad Supplying Dept, 1886.</a></li>
+        <li><a href="https://www.eia.gov/todayinenergy/detail.php?id=44237" target="_blank" rel="noopener">US EIA — Residential energy consumption &amp; electrification history.</a></li>
+      </ol>
+    </aside>
+
     <div class="era-transition-bar">
-      <span class="dm-mono">END OF ERA 02 — TURNING PAGE</span>
+      <span class="dm-mono">END OF ERA 02, TURNING PAGE</span>
       <div class="transition-rule"></div>
     </div>
   </section>
@@ -269,10 +497,20 @@
     <div class="era-print-header">
       <div class="era-stamp reveal-stamp">ERA 03</div>
       <div class="era-year-band">
-        <span class="dm-mono">1960s — 2000s</span>
+        <span class="dm-mono">1960s / 2000s</span>
       </div>
       <div class="era-unlock-badge" id="unlock3">✦ UNLOCKED</div>
     </div>
+
+    <figure class="archive-plate plate-full" data-plate="PLATE III · ERA 03">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
+           alt="Operators programming the ENIAC at the Ballistic Research Laboratory, 1947"
+           loading="lazy">
+      <figcaption>
+        <span>ENIAC, BALLISTIC RESEARCH LABORATORY, 1947, OPERATORS PROGRAMMING THE WORLD'S FIRST GENERAL-PURPOSE COMPUTER</span>
+        <span class="credit">US ARMY · PUBLIC DOMAIN</span>
+      </figcaption>
+    </figure>
 
     <div class="era-columns col-2">
 
@@ -282,30 +520,81 @@
         </h2>
         <div class="col-rule"></div>
         <p class="era-body print-reveal">
-          The first two revolutions replaced human muscle. The third one went further. It began replacing human decision-making — at least, the repetitive, rule-bound kind.
+          The first two revolutions replaced human muscle. The third one went further. It began replacing human decision-making, at least, the repetitive, rule-bound kind.
         </p>
         <p class="era-body print-reveal">
-          Programmable Logic Controllers arrived in 1969. For the first time, a machine could be told: "if this condition is true, do this." Robots entered factory floors not as novelties but as the cheapest, most reliable workers money could buy — no breaks, no unions, no errors.
+          Programmable Logic Controllers arrived in 1969.<sup class="cite-ref"><a href="https://en.wikipedia.org/wiki/Programmable_logic_controller" target="_blank" rel="noopener">[1]</a></sup> For the first time, a machine could be told: "if this condition is true, do this." Robots entered factory floors not as novelties but as the cheapest, most reliable workers money could buy, no breaks, no unions, no errors.
         </p>
         <p class="era-body print-reveal">
-          The internet arrived and rewired global commerce. Freemarkets.com launched the first digital reverse auctions in 1995, changing how corporations sourced everything from raw materials to components. The supply chain — invisible to most people — became the circulatory system of the global economy.
+          The internet arrived and rewired global commerce. Freemarkets.com launched the first digital reverse auctions in 1995,<sup class="cite-ref"><a href="https://en.wikipedia.org/wiki/FreeMarkets" target="_blank" rel="noopener">[2]</a></sup> changing how corporations sourced everything from raw materials to components. The supply chain, invisible to most people, became the circulatory system of the global economy.
         </p>
         <p class="era-body print-reveal">
-          But here was Industry 3.0's silent price: it displaced workers faster than it created new jobs. Factories that once employed hundreds ran with dozens. Entire skilled trades — tool-and-die, machining, precision assembly — began to vanish. Progress, yes. But progress that left a human cost in its wake.
+          But here was Industry 3.0's silent price: it displaced workers faster than it created new jobs. Factories that once employed hundreds ran with dozens. Entire skilled trades, tool-and-die, machining, precision assembly, began to vanish. Progress, yes. But progress that left a human cost in its wake.
         </p>
+        <p class="era-body print-reveal">
+          The ERP system — enterprise resource planning — became the nervous system of the corporate world. SAP, founded in 1972, eventually ran the back-end of 77% of the world's transaction revenue. Every purchase order, every inventory count, every payroll run funnelled through its logic. The computer had not merely entered the office. It had become the office.
+        </p>
+
+        <div class="chart-block" data-fig="FIG 06 · ERA 03" data-chart="v6">
+          <div class="chart-title">WHEN MACHINES ATE JOBS</div>
+          <div class="chart-sub">US MANUFACTURING · OUTPUT vs EMPLOYMENT · 1970 – 2010 · INDEX 1970 = 100</div>
+          <svg viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto">
+            <rect x="60" y="20" width="810" height="220" fill="none" class="axis" stroke-width="2"/>
+            <line x1="60" y1="70"  x2="870" y2="70"  class="gridline"/>
+            <line x1="60" y1="130" x2="870" y2="130" class="gridline"/>
+            <line x1="60" y1="190" x2="870" y2="190" class="gridline"/>
+
+            <text x="52" y="74"  text-anchor="end" font-size="10">220</text>
+            <text x="52" y="134" text-anchor="end" font-size="10">160</text>
+            <text x="52" y="194" text-anchor="end" font-size="10">100</text>
+            <text x="52" y="244" text-anchor="end" font-size="10">50</text>
+
+            <!-- OUTPUT line rising: 1970=100, 2010≈225 -->
+            <path class="data-line line-draw"
+                  style="stroke-dasharray:1200;stroke-dashoffset:1200"
+                  d="M 60 190 L 220 180 L 380 150 L 540 115 L 700 85 L 870 60"/>
+
+            <!-- EMPLOYMENT line falling: 1970=100, 2010≈65 -->
+            <path class="data-line data-line-ghost line-draw"
+                  style="stroke-dasharray:1200;stroke-dashoffset:1200"
+                  d="M 60 190 L 220 192 L 380 200 L 540 210 L 700 228 L 870 222"/>
+
+            <text x="800" y="55" font-family="Bebas Neue" font-size="16" letter-spacing="2" text-anchor="end">OUTPUT ↑</text>
+            <text x="800" y="215" font-family="Bebas Neue" font-size="16" letter-spacing="2" text-anchor="end" fill="#555">EMPLOYMENT ↓</text>
+
+            <text x="60"  y="260" text-anchor="start"  font-size="10">1970</text>
+            <text x="465" y="260" text-anchor="middle" font-size="10">1990</text>
+            <text x="870" y="260" text-anchor="end"    font-size="10">2010</text>
+
+            <text x="465" y="285" text-anchor="middle" font-size="10" class="chart-annotation">
+              THE SCISSOR GAP · MORE STUFF, FEWER PEOPLE MAKING IT
+            </text>
+          </svg>
+          <div class="chart-caption">DATA · <a href="https://fred.stlouisfed.org/series/IPMAN" target="_blank" rel="noopener">US FEDERAL RESERVE / FRED (INDUSTRIAL PRODUCTION)</a> &amp; <a href="https://www.bls.gov/iag/tgs/iag31-33.htm" target="_blank" rel="noopener">BUREAU OF LABOR STATISTICS</a>.</div>
+        </div>
       </div>
 
       <div class="col-side">
+        <figure class="archive-plate plate-inline" data-plate="FIG · ERA 03">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IBM_PC_5150.jpg/960px-IBM_PC_5150.jpg"
+               alt="IBM Personal Computer model 5150, released 1981"
+               loading="lazy">
+          <figcaption>
+            <span>IBM 5150 · THE PC, 1981</span>
+            <span class="credit">WIKIMEDIA · CC</span>
+          </figcaption>
+        </figure>
+
         <div class="classified-box print-reveal">
           <div class="classified-label">CLASSIFIED DETAIL</div>
-          <p>Industry 3.0 introduced the first online reverse auctions via <strong>Freemarkets.com (1995)</strong> — suddenly, every supplier on earth was competing in real time. Price transparency hit like a shockwave.</p>
+          <p>Industry 3.0 introduced the first online reverse auctions via <strong>Freemarkets.com (1995)</strong>, suddenly, every supplier on earth was competing in real time. Price transparency hit like a shockwave.</p>
         </div>
 
         <div class="era-quote-block print-reveal">
           <blockquote>
             "Excessive automation at Tesla was a mistake. Humans are underrated."
           </blockquote>
-          <cite>— Elon Musk, reflecting on over-automation</cite>
+          <cite>· Elon Musk, reflecting on over-automation</cite>
         </div>
 
         <div class="era-shift-box print-reveal">
@@ -341,12 +630,30 @@
             <span class="kf-val">AUTOMATION + DIGITAL COMMERCE</span>
           </div>
         </div>
+
+        <div class="mini-stat-card print-reveal" style="margin-top:1.5rem;">
+          <div class="msc-label">DEAD-WEIGHT FACT</div>
+          <div class="msc-figure">1969</div>
+          <div class="msc-body">The year Dick Morley and Modicon shipped the world's first PLC — replacing rooms of relay logic with a single programmable box.</div>
+          <div class="msc-source"><a href="https://en.wikipedia.org/wiki/Programmable_logic_controller" target="_blank" rel="noopener">SRC · Wikipedia / IEEE History</a></div>
+        </div>
+
       </div>
 
     </div>
 
+    <aside class="era-sources">
+      <div class="era-sources-label">SOURCES · ERA 03</div>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Programmable_logic_controller" target="_blank" rel="noopener">Wikipedia — Programmable Logic Controller: origin 1969, Modicon 084, Dick Morley.</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/FreeMarkets" target="_blank" rel="noopener">Wikipedia — FreeMarkets: first digital B2B reverse auctions, founded 1995.</a></li>
+        <li><a href="https://fred.stlouisfed.org/series/IPMAN" target="_blank" rel="noopener">Federal Reserve FRED — Industrial Production: Manufacturing (IPMAN), 1970–2010 index.</a></li>
+        <li><a href="https://www.bls.gov/iag/tgs/iag31-33.htm" target="_blank" rel="noopener">Bureau of Labor Statistics — Manufacturing industry employment and output data.</a></li>
+      </ol>
+    </aside>
+
     <div class="era-transition-bar">
-      <span class="dm-mono">END OF ERA 03 — TURNING PAGE</span>
+      <span class="dm-mono">END OF ERA 03, TURNING PAGE</span>
       <div class="transition-rule"></div>
     </div>
   </section>
@@ -356,14 +663,24 @@
     <div class="era-print-header">
       <div class="era-stamp reveal-stamp">ERA 04</div>
       <div class="era-year-band">
-        <span class="dm-mono">2010s — PRESENT</span>
+        <span class="dm-mono">2010s / PRESENT</span>
       </div>
       <div class="era-unlock-badge" id="unlock4">✦ UNLOCKED</div>
     </div>
 
+    <figure class="archive-plate plate-full" data-plate="PLATE IV · ERA 04">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Factory_Automation_Robotics_Palettizing_Bread.jpg/1920px-Factory_Automation_Robotics_Palettizing_Bread.jpg"
+           alt="Modern factory automation, robotic arms at work on a production line"
+           loading="lazy">
+      <figcaption>
+        <span>SMART FACTORY · ROBOTIC ARMS OPERATING WITHOUT HUMAN INTERVENTION</span>
+        <span class="credit">WIKIMEDIA · CC-BY-SA</span>
+      </figcaption>
+    </figure>
+
     <div class="era-columns col-1">
 
-      <div class="col-main col-full">
+      <div>
         <h2 class="era-headline print-reveal era-headline-xl">
           EVERYTHING<br>CONNECTED.<br>EVERYTHING<br>TALKING.
         </h2>
@@ -373,21 +690,39 @@
       <div class="col-two-up">
         <div>
           <p class="era-body print-reveal">
-            Industry 4.0 didn't just upgrade the factory — it dissolved its walls. When Rolls-Royce fitted IoT sensors to jet engines so they could predict failures before they happened, the factory floor had effectively expanded into the sky above every commercial flight on earth. The concept of "local" manufacturing ceased to mean anything.
+            Industry 4.0 didn't just upgrade the factory, it dissolved its walls. When Rolls-Royce fitted IoT sensors to jet engines so they could predict failures before they happened,<sup class="cite-ref"><a href="https://www.rolls-royce.com/media/our-stories/discover/2019/totalcare.aspx" target="_blank" rel="noopener">[1]</a></sup> the factory floor had effectively expanded into the sky above every commercial flight on earth. The concept of "local" manufacturing ceased to mean anything.
           </p>
           <p class="era-body print-reveal">
-            BMW introduced collaborative robots — cobots — that worked side by side with humans on the production line. GE deployed digital twins: full virtual replicas of physical machines, running in parallel, predicting failure and optimising performance in real time. DHL built smart logistics networks where every package knew where it was and when it would arrive before a human looked at a screen.
+            BMW introduced collaborative robots, cobots, that worked side by side with humans on the production line. GE deployed digital twins: full virtual replicas of physical machines, running in parallel, predicting failure and optimising performance in real time. DHL built smart logistics networks where every package knew where it was and when it would arrive before a human looked at a screen.
           </p>
-        </div>
-        <div>
           <p class="era-body print-reveal">
-            And yet — Industry 4.0 had a dirty secret that McKinsey eventually quantified: fewer than 10% of companies attempting advanced process control actually extracted strong value from it. BCG confirmed that only 5% of firms piloting AI initiatives achieved meaningful returns at scale.
+            And yet, Industry 4.0 had a dirty secret that McKinsey eventually quantified: fewer than 10% of companies attempting advanced process control actually extracted strong value from it.<sup class="cite-ref"><a href="https://www.mckinsey.com/capabilities/operations/our-insights/capturing-the-true-value-of-industry-four-point-zero" target="_blank" rel="noopener">[2]</a></sup> BCG confirmed that only 5% of firms piloting AI initiatives achieved meaningful returns at scale.<sup class="cite-ref"><a href="https://www.bcg.com/publications/2020/how-large-companies-are-capturing-value-from-ai-at-scale" target="_blank" rel="noopener">[3]</a></sup>
           </p>
           <p class="era-body print-reveal">
             The machines were talking to each other. But nobody had stopped to ask: were humans still part of the conversation? Operators became passive monitors. Skills were trained around tools rather than judgment. The efficiency metrics looked incredible. The humans running the systems felt increasingly like spectators in their own factories.
           </p>
           <p class="era-body print-reveal">
             Industry 4.0 connected everything. It just forgot to ask who it was all for.
+          </p>
+          <p class="era-body print-reveal">
+            The data centre became the new factory floor. By 2020, the world was generating 2.5 quintillion bytes of data every day. Every sensor reading, every machine handshake, every logistics ping added to a torrent of information that no human could read but algorithms could devour.
+          </p>
+        </div>
+        <div>
+          <figure class="archive-plate plate-inline" data-plate="FIG · ERA 04">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/CERN_Server_03.jpg/1280px-CERN_Server_03.jpg"
+                 alt="Modern server room with row of data-centre racks"
+                 loading="lazy">
+            <figcaption>
+              <span>DATA CENTRE · INVISIBLE NERVOUS SYSTEM OF 4.0</span>
+              <span class="credit">WIKIMEDIA · CC</span>
+            </figcaption>
+          </figure>
+          <p class="era-body print-reveal">
+            The cloud wasn't a place. It was a new kind of industrial infrastructure, as essential to 4.0 as coal was to 1.0.
+          </p>
+          <p class="era-body print-reveal">
+            Supply chains became hyper-optimised. A car built in Germany pulled parts from 300 suppliers across 30 countries, coordinated by software that recalculated in real time. Just-in-time was no longer a philosophy — it was a mathematical constraint enforced by code. The factory had become a node in a planetary network.
           </p>
         </div>
       </div>
@@ -396,12 +731,12 @@
         <div class="era-card">
           <div class="ec-icon">⚙</div>
           <div class="ec-title">ROLLS-ROYCE</div>
-          <p class="ec-body">IoT sensors on jet engines predict failures before they happen — mid-flight, in real time.</p>
+          <p class="ec-body">IoT sensors on jet engines predict failures before they happen, mid-flight, in real time.</p>
         </div>
         <div class="era-card">
           <div class="ec-icon">🤖</div>
           <div class="ec-title">BMW COBOTS</div>
-          <p class="ec-body">Collaborative robots handle heavy lifting on the production line — humans do the dexterous work.</p>
+          <p class="ec-body">Collaborative robots handle heavy lifting on the production line, humans do the dexterous work.</p>
         </div>
         <div class="era-card">
           <div class="ec-icon">🪞</div>
@@ -415,19 +750,71 @@
         </div>
       </div>
 
-      <div class="era-stat-row print-reveal">
-        <div class="stat-callout">
-          <div class="sc-num">&#60;10%</div>
-          <div class="sc-label">of firms extracting strong value from advanced process control<br><span class="dm-mono">(McKinsey)</span></div>
+      <div class="chart-block" data-fig="FIG 07 · ERA 04" data-chart="v7">
+        <div class="chart-title">THE 5% CLUB</div>
+        <div class="chart-sub">OF 100 FIRMS CHASING ADVANCED AUTOMATION, HOW MANY ACTUALLY WON?</div>
+
+        <div class="waffle-pair">
+          <div class="waffle-col">
+            <div class="waffle-stat">&lt;10<small style="font-size:2rem">%</small></div>
+            <div class="waffle-label">EXTRACTED STRONG VALUE<br>FROM ADVANCED PROCESS CONTROL</div>
+            <div class="waffle" data-waffle-fill="9"></div>
+          </div>
+          <div class="waffle-col">
+            <div class="waffle-stat">5<small style="font-size:2rem">%</small></div>
+            <div class="waffle-label">ACHIEVED MEANINGFUL<br>AI RETURNS AT SCALE</div>
+            <div class="waffle" data-waffle-fill="5"></div>
+          </div>
         </div>
-        <div class="stat-callout">
-          <div class="sc-num">5%</div>
-          <div class="sc-label">of companies achieving meaningful AI returns at scale<br><span class="dm-mono">(BCG)</span></div>
+
+        <div class="waffle-legend">
+          <span><i class="on"></i>WON</span>
+          <span><i></i>DID NOT</span>
         </div>
-        <div class="stat-callout">
-          <div class="sc-num counter" data-target="2011">0</div>
-          <div class="sc-label">Year Industry 4.0 was born — coined in Germany<br><span class="dm-mono">(Hannover Messe)</span></div>
-        </div>
+
+        <div class="chart-caption">SRC · <a href="https://www.mckinsey.com/capabilities/operations/our-insights/capturing-the-true-value-of-industry-four-point-zero" target="_blank" rel="noopener">MCKINSEY &lt;10% ADVANCED PROCESS CONTROL</a> · <a href="https://www.bcg.com/publications/2020/how-large-companies-are-capturing-value-from-ai-at-scale" target="_blank" rel="noopener">BCG 5% AI RETURNS AT SCALE</a>. ONE DOT = ONE FIRM OF 100.</div>
+      </div>
+
+      <div class="chart-block" data-fig="FIG 08 · ERA 04" data-chart="v8">
+        <div class="chart-title">EVERYTHING TALKS</div>
+        <div class="chart-sub">IoT CONNECTED DEVICES WORLDWIDE · 2010 – 2025 (BILLIONS)</div>
+        <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto">
+          <defs>
+            <pattern id="hatchIoT" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="6" stroke="#0a0a0a" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect x="60" y="20" width="810" height="200" fill="none" class="axis" stroke-width="2"/>
+          <line x1="60" y1="70"  x2="870" y2="70"  class="gridline"/>
+          <line x1="60" y1="120" x2="870" y2="120" class="gridline"/>
+          <line x1="60" y1="170" x2="870" y2="170" class="gridline"/>
+          <text x="52" y="74"  text-anchor="end" font-size="10">30B</text>
+          <text x="52" y="124" text-anchor="end" font-size="10">20B</text>
+          <text x="52" y="174" text-anchor="end" font-size="10">10B</text>
+          <text x="52" y="224" text-anchor="end" font-size="10">0</text>
+
+          <!-- area -->
+          <path class="area-reveal"
+                d="M 60 215 L 180 208 L 320 195 L 460 170 L 600 130 L 740 75 L 870 35 L 870 220 L 60 220 Z"
+                fill="url(#hatchIoT)" opacity="0.4"/>
+          <path class="data-line line-draw"
+                style="stroke-dasharray:1500;stroke-dashoffset:1500"
+                d="M 60 215 L 180 208 L 320 195 L 460 170 L 600 130 L 740 75 L 870 35"/>
+
+          <circle class="data-point point-fade" data-delay="1" cx="60" cy="215" r="4.5"/>
+          <circle class="data-point point-fade" data-delay="2" cx="320" cy="195" r="4.5"/>
+          <circle class="data-point point-fade" data-delay="3" cx="600" cy="130" r="4.5"/>
+          <circle class="data-point data-point-solid point-fade" data-delay="5" cx="870" cy="35" r="5"/>
+
+          <text x="60"  y="240" text-anchor="start" font-size="10">2010 · ~1B</text>
+          <text x="465" y="240" text-anchor="middle" font-size="10">2018</text>
+          <text x="870" y="240" text-anchor="end" font-size="10">2025 · ~30B</text>
+
+          <text x="465" y="265" text-anchor="middle" font-size="10" class="chart-annotation">
+            MORE DEVICES NOW TALKING TO EACH OTHER THAN PEOPLE ALIVE
+          </text>
+        </svg>
+        <div class="chart-caption">DATA · <a href="https://iot-analytics.com/number-connected-iot-devices/" target="_blank" rel="noopener">IoT ANALYTICS — NUMBER OF CONNECTED DEVICES 2024</a>.</div>
       </div>
 
       <div class="versus-block print-reveal">
@@ -471,8 +858,18 @@
 
     </div>
 
+    <aside class="era-sources">
+      <div class="era-sources-label">SOURCES · ERA 04</div>
+      <ol>
+        <li><a href="https://www.rolls-royce.com/media/our-stories/discover/2019/totalcare.aspx" target="_blank" rel="noopener">Rolls-Royce — TotalCare: IoT-powered predictive engine maintenance.</a></li>
+        <li><a href="https://www.mckinsey.com/capabilities/operations/our-insights/capturing-the-true-value-of-industry-four-point-zero" target="_blank" rel="noopener">McKinsey Global Institute — Capturing the true value of Industry 4.0 (&lt;10% extracting strong value).</a></li>
+        <li><a href="https://www.bcg.com/publications/2020/how-large-companies-are-capturing-value-from-ai-at-scale" target="_blank" rel="noopener">BCG — How Large Companies Are Capturing Value from AI at Scale (5% meaningful returns).</a></li>
+        <li><a href="https://iot-analytics.com/number-connected-iot-devices/" target="_blank" rel="noopener">IoT Analytics — State of IoT 2024: global connected device count (1B → 30B+).</a></li>
+      </ol>
+    </aside>
+
     <div class="era-transition-bar">
-      <span class="dm-mono">END OF ERA 04 — FINAL PAGE LOADING</span>
+      <span class="dm-mono">END OF ERA 04, FINAL PAGE LOADING</span>
       <div class="transition-rule"></div>
     </div>
   </section>
@@ -482,10 +879,20 @@
     <div class="era-print-header">
       <div class="era-stamp reveal-stamp era5-stamp">ERA 05</div>
       <div class="era-year-band">
-        <span class="dm-mono">2021 — THE FUTURE</span>
+        <span class="dm-mono">2021 / THE FUTURE</span>
       </div>
       <div class="era-unlock-badge" id="unlock5">✦ UNLOCKED</div>
     </div>
+
+    <figure class="archive-plate plate-full" data-plate="PLATE V · ERA 05">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Der_kollaborative_Roboter_Sawyer_von_Rethink_Robotics_beim_Einsatz_in_der_Industrie.jpg/1920px-Der_kollaborative_Roboter_Sawyer_von_Rethink_Robotics_beim_Einsatz_in_der_Industrie.jpg"
+           alt="Sawyer collaborative robot from Rethink Robotics working alongside human operators on an industrial production line"
+           loading="lazy">
+      <figcaption>
+        <span>SAWYER COBOT · HAHN GROUP FACILITY · HUMAN AND MACHINE SHARE THE LINE</span>
+        <span class="credit"><a href="https://commons.wikimedia.org/wiki/File:Der_kollaborative_Roboter_Sawyer_von_Rethink_Robotics_beim_Einsatz_in_der_Industrie.jpg" target="_blank" rel="noopener">WIKIMEDIA · CC-BY-SA 4.0</a></span>
+      </figcaption>
+    </figure>
 
     <div class="era-columns col-2">
       <div class="col-main">
@@ -494,30 +901,103 @@
         </h2>
         <div class="col-rule"></div>
         <p class="era-body print-reveal">
-          In 2021, the European Commission did something unexpected. It didn't announce a new technology. It announced a new <em>purpose</em>. Industry 5.0 was formally defined not by what machines could do — but by what they should do, and for whom.
+          In 2021, the European Commission did something unexpected. It didn't announce a new technology. It announced a new <em>purpose</em>. Industry 5.0 was formally defined not by what machines could do, but by what they should do, and for whom.<sup class="cite-ref"><a href="https://research-and-innovation.ec.europa.eu/research-area/industrial-research-and-innovation/industry-50_en" target="_blank" rel="noopener">[2]</a></sup>
         </p>
         <p class="era-body print-reveal">
-          The three pillars: <strong>Human-centric.</strong> <strong>Sustainable.</strong> <strong>Resilient.</strong> After 260 years of asking "how fast can we go?" — Industry 5.0 finally asked "but should we?"
+          The three pillars: <strong>Human-centric.</strong> <strong>Sustainable.</strong> <strong>Resilient.</strong> After 260 years of asking "how fast can we go?", Industry 5.0 finally asked "but should we?"
         </p>
         <p class="era-body print-reveal">
-          Mercedes-Benz, building the S-Class, made a decision that would have been unthinkable in 4.0: they deliberately <em>reduced</em> automation. Because the dexterous, judgment-rich process of assembling a luxury vehicle couldn't be done better by a robot than by a skilled human. The machine stepped back. The craftsperson stepped forward.
+          Mercedes-Benz, building the S-Class, made a decision that would have been unthinkable in 4.0: they deliberately <em>reduced</em> automation.<sup class="cite-ref"><a href="https://www.reuters.com/business/autos-transportation/mercedes-benz-bringing-back-some-manual-work-factory-2021-09-23/" target="_blank" rel="noopener">[3]</a></sup> Because the dexterous, judgment-rich process of assembling a luxury vehicle couldn't be done better by a robot than by a skilled human. The machine stepped back. The craftsperson stepped forward.
         </p>
         <p class="era-body print-reveal">
-          Nike combined AI systems with human designers — not to replace creative judgment, but to augment it. The AI handles the data, the iteration, the options. The human decides what's beautiful, what's meaningful, what tells a story worth wearing.
+          Nike combined AI systems with human designers, not to replace creative judgment, but to augment it.<sup class="cite-ref"><a href="https://www.voguebusiness.com/technology/nike-is-using-ai-to-design-its-shoes" target="_blank" rel="noopener">[4]</a></sup> The AI handles the data, the iteration, the options. The human decides what's beautiful, what's meaningful, what tells a story worth wearing.
         </p>
         <p class="era-body print-reveal">
           This is the defining insight of Industry 5.0: the most powerful factory is not the most automated one. It is the one where technology frees human creativity to be its most human.
         </p>
+        <p class="era-body print-reveal">
+          The pandemic proved the point violently. Supply chains built entirely on algorithmic optimisation — lean, efficient, globally distributed — shattered under the first real shock in decades. Resilience, the third pillar, turned out not to be a soft idea. It was the hardest engineering requirement of all.
+        </p>
+        <p class="era-body print-reveal">
+          Industry 5.0 is not a rejection of 4.0. It is its correction. The sensors stay. The data flows. The algorithms still run. But at the centre of the system now sits something that no machine has ever been able to replicate: the human who asks why.
+        </p>
+
+        <div class="chart-block" data-fig="FIG 09 · ERA 05" data-chart="v9">
+          <div class="chart-title">THE $255.7B HORIZON</div>
+          <div class="chart-sub">PROJECTED INDUSTRY 5.0 MARKET · 2023 – 2029 · BILLIONS USD</div>
+          <svg viewBox="0 0 900 280" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto">
+            <defs>
+              <pattern id="hatchProj" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="5" stroke="#0a0a0a" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect x="60" y="20" width="810" height="200" fill="none" class="axis" stroke-width="2"/>
+            <line x1="60" y1="66"  x2="870" y2="66"  class="gridline"/>
+            <line x1="60" y1="120" x2="870" y2="120" class="gridline"/>
+            <line x1="60" y1="170" x2="870" y2="170" class="gridline"/>
+            <text x="52" y="70"  text-anchor="end" font-size="10">$200B</text>
+            <text x="52" y="124" text-anchor="end" font-size="10">$130B</text>
+            <text x="52" y="174" text-anchor="end" font-size="10">$65B</text>
+            <text x="52" y="224" text-anchor="end" font-size="10">$0</text>
+
+            <!-- Historical / solid bar: 2023 (~$50B) -->
+            <rect class="bar-up" x="100" y="182" width="80" height="38" fill="#0a0a0a" style="transform-origin:100px 220px"><title>2023 (observed) — approx $50B</title></rect>
+            <!-- Projection bars (hatched): 2024 onward -->
+            <rect class="bar-up" x="210" y="168" width="80" height="52" fill="url(#hatchProj)" stroke="#0a0a0a" stroke-width="1.5" style="transform-origin:210px 220px"><title>2024 forecast — approx $67B</title></rect>
+            <rect class="bar-up" x="320" y="148" width="80" height="72" fill="url(#hatchProj)" stroke="#0a0a0a" stroke-width="1.5" style="transform-origin:320px 220px"><title>2025 forecast — approx $93B</title></rect>
+            <rect class="bar-up" x="430" y="122" width="80" height="98" fill="url(#hatchProj)" stroke="#0a0a0a" stroke-width="1.5" style="transform-origin:430px 220px"><title>2026 forecast — approx $128B</title></rect>
+            <rect class="bar-up" x="540" y="93"  width="80" height="127" fill="url(#hatchProj)" stroke="#0a0a0a" stroke-width="1.5" style="transform-origin:540px 220px"><title>2027 forecast — approx $165B</title></rect>
+            <rect class="bar-up" x="650" y="60"  width="80" height="160" fill="url(#hatchProj)" stroke="#0a0a0a" stroke-width="1.5" style="transform-origin:650px 220px"><title>2028 forecast — approx $208B</title></rect>
+            <rect class="bar-up" x="760" y="23"  width="80" height="197" fill="#0a0a0a" style="transform-origin:760px 220px"><title>2029 forecast — $255.7B (MarketsandMarkets)</title></rect>
+
+            <text x="140" y="240" text-anchor="middle" font-size="10">2023</text>
+            <text x="250" y="240" text-anchor="middle" font-size="10">2024</text>
+            <text x="360" y="240" text-anchor="middle" font-size="10">2025</text>
+            <text x="470" y="240" text-anchor="middle" font-size="10">2026</text>
+            <text x="580" y="240" text-anchor="middle" font-size="10">2027</text>
+            <text x="690" y="240" text-anchor="middle" font-size="10">2028</text>
+            <text x="800" y="240" text-anchor="middle" font-size="10">2029</text>
+
+            <text x="800" y="16" text-anchor="middle" font-family="Bebas Neue" font-size="16" letter-spacing="1">$255.7B</text>
+
+            <text x="465" y="265" text-anchor="middle" font-size="10" class="chart-annotation">
+              SOLID = OBSERVED · HATCHED = FORECAST · PERSONALISATION &amp; SUSTAINABILITY AS THE MOAT
+            </text>
+          </svg>
+          <div class="chart-caption">DATA · <a href="https://www.marketsandmarkets.com/Market-Reports/industry-5-market-35376359.html" target="_blank" rel="noopener">MARKETSANDMARKETS INDUSTRY 5.0 FORECAST (2024)</a>.</div>
+        </div>
+
+        <div class="era-quote-block print-reveal">
+          <blockquote>"The most dangerous phrase in any language is: we've always done it this way."</blockquote>
+          <cite>· Grace Hopper, computing pioneer — still the Industry 5.0 challenge</cite>
+        </div>
+
+        <div class="mini-stat-card print-reveal" style="margin-top:1.5rem;">
+          <div class="msc-label">THE COBOT TIPPING POINT</div>
+          <div class="msc-figure">~$12K</div>
+          <div class="msc-body">By 2024, entry-level collaborative robots cost under $12,000 — less than a year of minimum wage. The barrier to human-machine collaboration in smaller firms collapsed overnight.</div>
+          <div class="msc-source"><a href="https://ifr.org/ifr-press-releases/news/robot-sales-reach-new-record" target="_blank" rel="noopener">SRC · IFR World Robotics Report</a></div>
+        </div>
       </div>
 
       <div class="col-side">
+        <figure class="archive-plate plate-inline" data-plate="FIG · ERA 05">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/98332_watchmaker_at_his_work_PikiWiki_Israel.jpg/1280px-98332_watchmaker_at_his_work_PikiWiki_Israel.jpg"
+               alt="A watchmaker at work in his Tel Aviv shop, dexterous precision craft"
+               loading="lazy">
+          <figcaption>
+            <span>CRAFT · HUMAN DEXTERITY, AUGMENTED BY MACHINE</span>
+            <span class="credit">WIKIMEDIA · CC</span>
+          </figcaption>
+        </figure>
+
         <div class="three-pillars print-reveal">
           <div class="pillar-title dm-mono">THE THREE PILLARS</div>
           <div class="pillar">
             <div class="pillar-num">I</div>
             <div class="pillar-content">
               <strong>HUMAN-CENTRIC</strong>
-              <p>Workers are assets, not costs. Technology serves people — not the other way around.</p>
+              <p>Workers are assets, not costs. Technology serves people, not the other way around.</p>
             </div>
           </div>
           <div class="pillar">
@@ -538,7 +1018,7 @@
 
         <div class="classified-box print-reveal" style="margin-top:1.5rem;">
           <div class="classified-label">CLASSIFIED DETAIL</div>
-          <p>The Industry 5.0 market is projected to reach <strong>$129.1 billion</strong>. Personalisation and sustainability are no longer nice-to-have — they are the competitive moat.</p>
+          <p>The Industry 5.0 market is projected to reach <strong>$255.7 billion by 2029</strong><sup class="cite-ref"><a href="https://www.marketsandmarkets.com/Market-Reports/industry-5-market-35376359.html" target="_blank" rel="noopener">[1]</a></sup>. Personalisation and sustainability are no longer nice-to-have, they are the competitive moat.</p>
         </div>
 
         <div class="era-shift-box print-reveal" style="margin-top:1.5rem;">
@@ -579,6 +1059,34 @@
             <span class="kf-val">HUMAN JUDGMENT RETURNS</span>
           </div>
         </div>
+
+        <div class="compare-strip print-reveal" style="margin-top:1.5rem;">
+          <div>
+            <div class="dm-mono" style="font-size:0.76rem;letter-spacing:.08em;margin-bottom:.6rem;opacity:.6">4.0 OPTIMISED FOR</div>
+            <ul style="list-style:none;padding:0;margin:0;font-size:0.75rem;line-height:1.6">
+              <li>Throughput</li>
+              <li>Machine uptime</li>
+              <li>Cost per unit</li>
+              <li>Automation %</li>
+            </ul>
+          </div>
+          <div>
+            <div class="dm-mono" style="font-size:0.76rem;letter-spacing:.08em;margin-bottom:.6rem;opacity:.6">5.0 OPTIMISED FOR</div>
+            <ul style="list-style:none;padding:0;margin:0;font-size:0.75rem;line-height:1.6">
+              <li>Worker wellbeing</li>
+              <li>Sustainability</li>
+              <li>Resilience</li>
+              <li>Human creativity</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mini-stat-card print-reveal" style="margin-top:1.5rem;">
+          <div class="msc-label">DEFINING PRINCIPLE</div>
+          <div class="msc-figure" style="font-size:1.1rem;line-height:1.3">"Place worker wellbeing at the centre of production."</div>
+          <div class="msc-body">European Commission, 2021 — the policy that formally named the Human Era.</div>
+          <div class="msc-source"><a href="https://research-and-innovation.ec.europa.eu/research-area/industrial-research-and-innovation/industry-50_en" target="_blank" rel="noopener">SRC · EU Industry 5.0 Policy Document</a></div>
+        </div>
       </div>
     </div>
 
@@ -588,7 +1096,7 @@
       <div class="cs-grid">
         <div class="cs-card">
           <div class="cs-brand">MERCEDES-BENZ</div>
-          <p>Deliberately reduced automation on the S-Class line. Human craftspeople assemble what robots cannot — with dexterity, judgment, and pride.</p>
+          <p>Deliberately reduced automation on the S-Class line. Human craftspeople assemble what robots cannot, with dexterity, judgment, and pride.</p>
         </div>
         <div class="cs-card">
           <div class="cs-brand">NIKE</div>
@@ -601,6 +1109,78 @@
       </div>
     </div>
 
+    <aside class="era-sources">
+      <div class="era-sources-label">SOURCES · ERA 05</div>
+      <ol>
+        <li><a href="https://www.marketsandmarkets.com/Market-Reports/industry-5-market-35376359.html" target="_blank" rel="noopener">MarketsandMarkets — Industry 5.0 Market Report: $255.7B forecast by 2029.</a></li>
+        <li><a href="https://research-and-innovation.ec.europa.eu/research-area/industrial-research-and-innovation/industry-50_en" target="_blank" rel="noopener">European Commission — Industry 5.0: Human-centric, Sustainable, Resilient (2021 definition).</a></li>
+        <li><a href="https://www.reuters.com/business/autos-transportation/mercedes-benz-bringing-back-some-manual-work-factory-2021-09-23/" target="_blank" rel="noopener">Reuters — Mercedes-Benz deliberately reduces automation on S-Class line (2021).</a></li>
+        <li><a href="https://www.voguebusiness.com/technology/nike-is-using-ai-to-design-its-shoes" target="_blank" rel="noopener">Vogue Business — Nike using AI to design shoes alongside human designers.</a></li>
+      </ol>
+    </aside>
+
+  </section>
+
+  <!-- ========= V10: COMPARISON MATRIX ========= -->
+  <section class="comparison-section">
+    <div class="comparison-inner">
+      <div class="comparison-header">FIG 10 · CRYSTALLISATION</div>
+      <h2 class="comparison-title">260 YEARS · FIVE ERAS · ONE TABLE</h2>
+      <table class="comparison-matrix" id="comparisonMatrix">
+        <thead>
+          <tr>
+            <th style="min-width:150px">&nbsp;</th>
+            <th><span class="cm-era">01 · 1760</span>STEAM &amp; COAL</th>
+            <th><span class="cm-era">02 · 1870</span>ELECTRICITY</th>
+            <th><span class="cm-era">03 · 1969</span>COMPUTERS</th>
+            <th><span class="cm-era">04 · 2011</span>THE NETWORK</th>
+            <th><span class="cm-era">05 · 2021</span>HUMAN ERA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">ENERGY SOURCE</th>
+            <td><span class="cm-val">COAL</span><span class="cm-note">STEAM · WATER</span><span class="cm-spark" style="--w:15%"><i></i></span></td>
+            <td><span class="cm-val">ELECTRICITY</span><span class="cm-note">OIL · GRID</span><span class="cm-spark" style="--w:35%"><i></i></span></td>
+            <td><span class="cm-val">MIXED</span><span class="cm-note">+ EARLY RENEWABLES</span><span class="cm-spark" style="--w:55%"><i></i></span></td>
+            <td><span class="cm-val">RENEWABLES↑</span><span class="cm-note">GRID + SOLAR + WIND</span><span class="cm-spark" style="--w:75%"><i></i></span></td>
+            <td><span class="cm-val">CIRCULAR</span><span class="cm-note">CLOSED-LOOP / ZERO-WASTE</span><span class="cm-spark" style="--w:95%"><i></i></span></td>
+          </tr>
+          <tr>
+            <th scope="row">HRS WORKED / WEEK</th>
+            <td><span class="cm-val">70+</span><span class="cm-note">12-HR SHIFTS · 6 DAYS</span><span class="cm-spark" style="--w:95%"><i></i></span></td>
+            <td><span class="cm-val">60</span><span class="cm-note">FIRST LABOUR LAWS</span><span class="cm-spark" style="--w:80%"><i></i></span></td>
+            <td><span class="cm-val">45</span><span class="cm-note">KNOWLEDGE WORK RISES</span><span class="cm-spark" style="--w:60%"><i></i></span></td>
+            <td><span class="cm-val">40</span><span class="cm-note">ALWAYS-ON BLUR</span><span class="cm-spark" style="--w:52%"><i></i></span></td>
+            <td><span class="cm-val">35&darr;</span><span class="cm-note">4-DAY WEEK TRIALS</span><span class="cm-spark" style="--w:45%"><i></i></span></td>
+          </tr>
+          <tr>
+            <th scope="row">LIFE EXPECTANCY</th>
+            <td><span class="cm-val">~35</span><span class="cm-note">BRITAIN, 1780</span><span class="cm-spark" style="--w:30%"><i></i></span></td>
+            <td><span class="cm-val">~50</span><span class="cm-note">SANITATION + MEDICINE</span><span class="cm-spark" style="--w:48%"><i></i></span></td>
+            <td><span class="cm-val">~70</span><span class="cm-note">ANTIBIOTICS · VACCINES</span><span class="cm-spark" style="--w:68%"><i></i></span></td>
+            <td><span class="cm-val">~77</span><span class="cm-note">GLOBAL AVERAGE 2020</span><span class="cm-spark" style="--w:78%"><i></i></span></td>
+            <td><span class="cm-val">~80+</span><span class="cm-note">BIOTECH HORIZON</span><span class="cm-spark" style="--w:85%"><i></i></span></td>
+          </tr>
+          <tr>
+            <th scope="row">GDP / CAPITA</th>
+            <td><span class="cm-val">~$1.2K</span><span class="cm-note">2011 USD · WORLD</span><span class="cm-spark" style="--w:8%"><i></i></span></td>
+            <td><span class="cm-val">~$2K</span><span class="cm-note">GROWTH DOUBLES</span><span class="cm-spark" style="--w:14%"><i></i></span></td>
+            <td><span class="cm-val">~$6K</span><span class="cm-note">COMPUTE EFFECT</span><span class="cm-spark" style="--w:40%"><i></i></span></td>
+            <td><span class="cm-val">~$14K</span><span class="cm-note">GLOBALISATION PEAK</span><span class="cm-spark" style="--w:78%"><i></i></span></td>
+            <td><span class="cm-val">~$18K</span><span class="cm-note">&amp; CLIMBING</span><span class="cm-spark" style="--w:96%"><i></i></span></td>
+          </tr>
+          <tr>
+            <th scope="row">DEFINING WORKER</th>
+            <td><span class="cm-val">FACTORY HAND</span><span class="cm-note">MUSCLE + ENDURANCE</span></td>
+            <td><span class="cm-val">LINE WORKER</span><span class="cm-note">SPEED + REPETITION</span></td>
+            <td><span class="cm-val">OPERATOR</span><span class="cm-note">RULE-BOUND LOGIC</span></td>
+            <td><span class="cm-val">MONITOR</span><span class="cm-note">SCREEN + DASHBOARD</span></td>
+            <td><span class="cm-val">CRAFTSPERSON</span><span class="cm-note">JUDGMENT + CREATIVITY</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- ========= FINAL PULLQUOTE ========= -->
@@ -614,56 +1194,86 @@
         <em>How can it help us do something worth doing?</em>"
       </blockquote>
       <div class="fq-rule"></div>
-      <p class="fq-sub dm-mono print-reveal">— THE GREAT MACHINE / END OF ARCHIVE —</p>
+      <p class="fq-sub dm-mono print-reveal">· THE GREAT MACHINE / END OF ARCHIVE ·</p>
     </div>
   </section>
 
   <!-- ========= FULL TIMELINE ========= -->
   <section class="timeline-section print-reveal">
-    <div class="tl-header dm-mono">THE FULL TIMELINE — 1760 TO NOW</div>
+    <div class="tl-header dm-mono">THE FULL TIMELINE, 1760 TO NOW</div>
     <div class="timeline-track">
-      <div class="tl-node" data-era="1">
+      <div class="tl-node" data-era="1" tabindex="0">
         <div class="tl-dot"></div>
         <div class="tl-info">
           <span class="tl-yr">1760</span>
           <span class="tl-name">Industry 1.0</span>
           <span class="tl-desc">Steam & Coal</span>
         </div>
+        <div class="tl-tooltip" role="tooltip">
+          <div class="tt-title">STEAM &amp; COAL</div>
+          <div class="tt-stat"><span>WORLD POPULATION</span><span>~780M</span></div>
+          <div class="tt-stat"><span>GDP / CAPITA</span><span>~$1.2K</span></div>
+          <div class="tt-stat"><span>SIGNATURE</span><span>WATT ENGINE</span></div>
+        </div>
       </div>
       <div class="tl-line"></div>
-      <div class="tl-node" data-era="2">
+      <div class="tl-node" data-era="2" tabindex="0">
         <div class="tl-dot"></div>
         <div class="tl-info">
           <span class="tl-yr">1870</span>
           <span class="tl-name">Industry 2.0</span>
           <span class="tl-desc">Electricity</span>
         </div>
+        <div class="tl-tooltip" role="tooltip">
+          <div class="tt-title">ELECTRICITY</div>
+          <div class="tt-stat"><span>WORLD POPULATION</span><span>~1.3B</span></div>
+          <div class="tt-stat"><span>GDP / CAPITA</span><span>~$2.1K</span></div>
+          <div class="tt-stat"><span>SIGNATURE</span><span>ASSEMBLY LINE</span></div>
+        </div>
       </div>
       <div class="tl-line"></div>
-      <div class="tl-node" data-era="3">
+      <div class="tl-node" data-era="3" tabindex="0">
         <div class="tl-dot"></div>
         <div class="tl-info">
           <span class="tl-yr">1969</span>
           <span class="tl-name">Industry 3.0</span>
           <span class="tl-desc">Computers</span>
         </div>
+        <div class="tl-tooltip" role="tooltip">
+          <div class="tt-title">COMPUTERS</div>
+          <div class="tt-stat"><span>WORLD POPULATION</span><span>~3.6B</span></div>
+          <div class="tt-stat"><span>GDP / CAPITA</span><span>~$5.8K</span></div>
+          <div class="tt-stat"><span>SIGNATURE</span><span>PLC · INTERNET</span></div>
+        </div>
       </div>
       <div class="tl-line"></div>
-      <div class="tl-node" data-era="4">
+      <div class="tl-node" data-era="4" tabindex="0">
         <div class="tl-dot"></div>
         <div class="tl-info">
           <span class="tl-yr">2011</span>
           <span class="tl-name">Industry 4.0</span>
           <span class="tl-desc">The Network</span>
         </div>
+        <div class="tl-tooltip" role="tooltip">
+          <div class="tt-title">THE NETWORK</div>
+          <div class="tt-stat"><span>WORLD POPULATION</span><span>~7.0B</span></div>
+          <div class="tt-stat"><span>GDP / CAPITA</span><span>~$14K</span></div>
+          <div class="tt-stat"><span>SIGNATURE</span><span>IoT · AI · CLOUD</span></div>
+        </div>
       </div>
       <div class="tl-line"></div>
-      <div class="tl-node tl-node-active" data-era="5">
+      <div class="tl-node tl-node-active" data-era="5" tabindex="0">
         <div class="tl-dot"></div>
         <div class="tl-info">
           <span class="tl-yr">2021</span>
           <span class="tl-name">Industry 5.0</span>
           <span class="tl-desc">The Human Era</span>
+        </div>
+        <div class="tl-tooltip" role="tooltip">
+          <div class="tt-title">THE HUMAN ERA</div>
+          <div class="tt-stat"><span>WORLD POPULATION</span><span>~7.9B</span></div>
+          <div class="tt-stat"><span>MARKET · 2029F</span><span>$255.7B</span></div>
+          <div class="tt-stat"><span>SIGNATURE</span><span>COBOTS · CRAFT</span></div>
         </div>
       </div>
     </div>
@@ -703,7 +1313,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-title dm-mono">THE GREAT MACHINE</div>
-      <div class="footer-sub">Industry 1.0 to 5.0 — A Research Chronicle</div>
+      <div class="footer-sub">Industry 1.0 to 5.0, A Research Chronicle</div>
       <div class="footer-sources dm-mono">22 SOURCES · CROSS-REFERENCED · DECODED FOR HUMAN READING</div>
     </div>
   </footer>

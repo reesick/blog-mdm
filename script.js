@@ -1,5 +1,5 @@
 /* ============================================================
-   THE GREAT MACHINE — script.js
+   THE GREAT MACHINE · script.js
    Scroll engine, era tracking, counters, stamp reveals
    ============================================================ */
 
@@ -16,17 +16,14 @@
   /* ── ELEMENTS ── */
   const progressFill  = document.getElementById('progressFill');
   const progressLabel = document.getElementById('progressLabel');
-  const eraCounter    = document.getElementById('eraCounter');
-  const erNav         = document.getElementById('erNav');
-  const navItems      = document.querySelectorAll('.era-nav-item');
 
   const eraLabels = {
     0: 'PROLOGUE',
-    1: 'ERA 01 — STEAM & COAL',
-    2: 'ERA 02 — ELECTRICITY',
-    3: 'ERA 03 — COMPUTERS',
-    4: 'ERA 04 — THE NETWORK',
-    5: 'ERA 05 — HUMAN ERA',
+    1: 'ERA 01 · STEAM & COAL',
+    2: 'ERA 02 · ELECTRICITY',
+    3: 'ERA 03 · COMPUTERS',
+    4: 'ERA 04 · THE NETWORK',
+    5: 'ERA 05 · HUMAN ERA',
   };
 
   /* ─────────────────────────────────────────────────
@@ -35,7 +32,8 @@
   function updateProgress() {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    const raw = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    const pct = Math.max(0, Math.min(100, raw));
     progressFill.style.width = pct.toFixed(2) + '%';
   }
 
@@ -67,11 +65,6 @@
 
     // progress label
     progressLabel.textContent = eraLabels[era] || '';
-
-    // nav highlight
-    navItems.forEach((item) => {
-      item.classList.toggle('active', parseInt(item.dataset.era, 10) === era);
-    });
   }
 
   function unlockEra(era) {
@@ -85,9 +78,6 @@
     // Unlock badge
     const badge = document.getElementById(`unlock${era}`);
     if (badge) badge.classList.add('unlocked');
-
-    // Counter update
-    eraCounter.innerHTML = `UNCOVERED: <strong>${state.uncoveredEras.size} / 5</strong>`;
 
     // Trigger counter animations inside that era
     const section = document.getElementById(`era${era}`);
@@ -208,32 +198,7 @@
   }
 
   /* ─────────────────────────────────────────────────
-     7. ERA NAVIGATOR — show after hero passes
-  ───────────────────────────────────────────────── */
-  const hero = document.getElementById('hero');
-
-  const heroObserver = new IntersectionObserver(
-    ([entry]) => {
-      erNav.style.opacity = entry.isIntersecting ? '0' : '1';
-      erNav.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
-      erNav.style.transform = entry.isIntersecting
-        ? 'translateY(-50%) translateX(20px)'
-        : 'translateY(-50%) translateX(0)';
-    },
-    { threshold: 0.1 }
-  );
-
-  if (hero) heroObserver.observe(hero);
-
-  // Fade-in transition on nav
-  if (erNav) {
-    erNav.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-    erNav.style.opacity = '0';
-    erNav.style.pointerEvents = 'none';
-  }
-
-  /* ─────────────────────────────────────────────────
-     8. SCROLL EVENT — master handler
+     8. SCROLL EVENT · master handler
   ───────────────────────────────────────────────── */
   let ticking = false;
 
@@ -249,7 +214,7 @@
   }, { passive: true });
 
   /* ─────────────────────────────────────────────────
-     9. KEYBOARD SHORTCUT — press any key to start
+     9. KEYBOARD SHORTCUT · press any key to start
   ───────────────────────────────────────────────── */
   let keyUsed = false;
   window.addEventListener('keydown', (e) => {
@@ -262,7 +227,7 @@
   });
 
   /* ─────────────────────────────────────────────────
-     10. CARD HOVER — subtle shadow shift
+     10. CARD HOVER · subtle shadow shift
   ───────────────────────────────────────────────── */
   document.querySelectorAll('.era-card, .cs-card, .classified-box').forEach((card) => {
     card.addEventListener('mouseenter', () => {
@@ -275,7 +240,7 @@
   });
 
   /* ─────────────────────────────────────────────────
-     11. VERSUS BLOCK — animate lines in on scroll
+     11. VERSUS BLOCK · animate lines in on scroll
   ───────────────────────────────────────────────── */
   const versusBlock = document.querySelector('.versus-block');
   if (versusBlock) {
@@ -300,7 +265,7 @@
   }
 
   /* ─────────────────────────────────────────────────
-     12. TIMELINE NODES — animate in sequence
+     12. TIMELINE NODES · animate in sequence
   ───────────────────────────────────────────────── */
   const timelineSection = document.querySelector('.timeline-section');
   if (timelineSection) {
@@ -356,7 +321,7 @@
   }
 
   /* ─────────────────────────────────────────────────
-     14. FINAL QUOTE — dramatic entrance
+     14. FINAL QUOTE · dramatic entrance
   ───────────────────────────────────────────────── */
   const finalQuote = document.querySelector('.final-quote');
   if (finalQuote) {
@@ -383,7 +348,7 @@
   ───────────────────────────────────────────────── */
   updateProgress();
 
-  // On load — trigger any already-visible reveals
+  // On load · trigger any already-visible reveals
   window.addEventListener('load', () => {
     revealEls.forEach((el) => {
       const rect = el.getBoundingClientRect();
@@ -393,4 +358,239 @@
     });
   });
 
+})();
+
+/* ============================================================
+   VISUAL UPGRADE · chart + figure reveal animations
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* Build waffle grids before they become visible */
+  function buildWaffles() {
+    document.querySelectorAll('.waffle[data-waffle-fill]').forEach((el) => {
+      if (el.dataset.built) return;
+      const total = 100;
+      const fill = parseInt(el.dataset.waffleFill || '0', 10);
+      // pick visually balanced positions
+      const positions = pickPositions(fill, total);
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < total; i++) {
+        const cell = document.createElement('span');
+        cell.className = 'waffle-cell';
+        if (positions.has(i)) cell.classList.add('on');
+        // stagger entry delay (capped)
+        cell.style.transitionDelay = (0.002 * i) + 's';
+        frag.appendChild(cell);
+      }
+      el.appendChild(frag);
+      el.dataset.built = '1';
+    });
+  }
+
+  function pickPositions(n, total) {
+    // deterministic but visually scattered
+    const s = new Set();
+    if (n <= 0) return s;
+    const step = Math.max(1, Math.floor(total / n));
+    let i = Math.floor(step / 2);
+    while (s.size < n && i < total) {
+      s.add(i);
+      i += step;
+    }
+    let k = 7;
+    while (s.size < n) {
+      if (!s.has(k % total)) s.add(k % total);
+      k += 13;
+    }
+    return s;
+  }
+
+  /* Intersection observer for charts + archive plates + comparison matrix */
+  const blocks = document.querySelectorAll('.chart-block, .archive-plate, .comparison-matrix');
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+
+        // Chart-specific tweaks
+        if (entry.target.classList.contains('chart-block')) {
+          // Trigger counter animations inside
+          entry.target.querySelectorAll('.counter[data-target]').forEach((el) => {
+            if (el.dataset.counted) return;
+            el.dataset.counted = '1';
+            const target = parseInt(el.dataset.target, 10);
+            animateCounter(el, target);
+          });
+
+          // Normalise line-draw dash lengths
+          entry.target.querySelectorAll('path.line-draw').forEach((p) => {
+            try {
+              const len = p.getTotalLength();
+              p.style.strokeDasharray = len;
+              p.style.strokeDashoffset = len;
+              // force reflow then remove to trigger transition
+              requestAnimationFrame(() => {
+                p.style.strokeDashoffset = '0';
+              });
+            } catch (e) { /* SVG not ready · skip */ }
+          });
+        }
+
+        obs.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+  );
+
+  function animateCounter(el, target) {
+    const duration = 1200;
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(target * eased).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* Initialise */
+  function init() {
+    buildWaffles();
+    blocks.forEach((b) => obs.observe(b));
+
+    // If any block is already in view on load, reveal it immediately
+    blocks.forEach((b) => {
+      const rect = b.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        b.classList.add('visible');
+        b.querySelectorAll('path.line-draw').forEach((p) => {
+          try {
+            const len = p.getTotalLength();
+            p.style.strokeDasharray = len;
+            p.style.strokeDashoffset = '0';
+          } catch (e) { /* ignore */ }
+        });
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+/* ============================================================
+   HOVER INTERACTIONS — tooltips, lightbox
+   ============================================================ */
+(function () {
+  /* --- Chart bar / data-point tooltips ---
+     Reads the <title> text already embedded in SVG elements
+     and shows a floating div positioned near the cursor.     */
+  const tip = document.createElement('div');
+  tip.id = 'svg-tooltip';
+  tip.style.cssText = [
+    'position:fixed',
+    'pointer-events:none',
+    'z-index:9999',
+    'background:#0a0a0a',
+    'color:#f5f3ef',
+    'font-family:"DM Mono",monospace',
+    'font-size:0.72rem',
+    'letter-spacing:.06em',
+    'padding:0.35em 0.7em',
+    'border:1px solid #0a0a0a',
+    'opacity:0',
+    'transition:opacity .15s ease',
+    'white-space:nowrap',
+    'max-width:240px',
+  ].join(';');
+  document.body.appendChild(tip);
+
+  function showTip(e, text) {
+    tip.textContent = text;
+    tip.style.opacity = '1';
+    moveTip(e);
+  }
+  function moveTip(e) {
+    const x = e.clientX + 14;
+    const y = e.clientY - 28;
+    tip.style.left = Math.min(x, window.innerWidth - 260) + 'px';
+    tip.style.top = Math.max(y, 4) + 'px';
+  }
+  function hideTip() { tip.style.opacity = '0'; }
+
+  /* Attach to all SVG <rect>, <circle>, <path> that have a direct <title> child */
+  function attachSvgTips() {
+    document.querySelectorAll('svg rect, svg circle, svg path').forEach((el) => {
+      const titleEl = el.querySelector(':scope > title');
+      if (!titleEl) return;
+      const text = titleEl.textContent.trim();
+      el.style.cursor = 'crosshair';
+      el.addEventListener('mouseenter', (e) => showTip(e, text));
+      el.addEventListener('mousemove', moveTip);
+      el.addEventListener('mouseleave', hideTip);
+    });
+  }
+
+  /* --- Lightbox for archive-plate images --- */
+  function buildLightbox() {
+    const overlay = document.createElement('div');
+    overlay.id = 'lightbox-overlay';
+    overlay.style.cssText = [
+      'display:none',
+      'position:fixed',
+      'inset:0',
+      'z-index:10000',
+      'background:rgba(10,10,10,.93)',
+      'cursor:zoom-out',
+      'align-items:center',
+      'justify-content:center',
+    ].join(';');
+
+    const img = document.createElement('img');
+    img.id = 'lightbox-img';
+    img.style.cssText = [
+      'max-width:92vw',
+      'max-height:90vh',
+      'object-fit:contain',
+      'border:2px solid #f5f3ef',
+      'box-shadow:0 8px 48px rgba(0,0,0,.8)',
+    ].join(';');
+
+    overlay.appendChild(img);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = '';
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { overlay.style.display = 'none'; document.body.style.overflow = ''; }
+    });
+
+    document.querySelectorAll('.archive-plate img').forEach((el) => {
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        img.src = el.src;
+        img.alt = el.alt || '';
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => { attachSvgTips(); buildLightbox(); });
+  } else {
+    attachSvgTips();
+    buildLightbox();
+  }
 })();
