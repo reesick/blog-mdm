@@ -54,7 +54,7 @@
         setActiveEra(era);
       });
     },
-    { threshold: 0.25 }
+    { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
   );
 
   eraSections.forEach((s) => eraObserver.observe(s));
